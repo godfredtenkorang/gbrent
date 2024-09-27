@@ -2,7 +2,411 @@
 {% load static %}
 
 {% block content %}
+<style>
+    .explore-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--whiteColor);
+        margin-bottom: 5%;
+        background-size: cover;
+        width: 100%;
+        height: 40vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+        url("{% static 'rent/img/banner.jpg' %}");
+    }
+</style>
 
-<h1>This is GB Rent</h1>
+<!-- slider-show -->
+<section class="slider-section-container">
+    <div class="slide">
+        <img src="{% static 'rent/img/banner.jpg' %}" alt="">
+        <div class="slider-text padding">
+            <h1>Find a Perfect Place To Stay</h1>
+            <p>Explore our wide range of rental properties to find your ideal home away from home. <br> Whether you're
+                looking for a short-term stay or a long-term residence, <br> we have the perfect options tailored to
+                meet your needs and budget.</p>
+            <a href="">Make Enquiry</a>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+<!-- abut us section -->
+<section class="about-us-section padding">
+    <div class="about-img">
+        <img src="{% static 'rent/img/7.png' %}" alt="">
+    </div>
+    <div class="about-text">
+        <h3>About Us</h3>
+        <h2> The Leading Real Estate Rental Marketplace.</h2>
+        <p> Over 39,000 people work for us in more than 70 countries all over the This breadth of global coverage,
+            combined with specialist services</p>
+
+        <div class="about-section">
+            <div class="about-col">
+                <p><i class="fa-solid fa-house"></i> Property Rentals</p>
+            </div>
+            <div class="about-col">
+                <p><i class="fa-solid fa-building"></i> Real Estate Sales</p>
+            </div>
+            <div class="about-col">
+                <p><i class="fa-solid fa-thumbs-up"></i> User Satisfaction</p>
+            </div>
+            <div class="about-col">
+                <p><i class="fa-solid fa-list"></i> Comprehensive Listings</p>
+            </div>
+            <div class="about-col">
+                <p><i class="fa-solid fa-shield"></i> Trusted Platform</p>
+            </div>
+            <div class="about-col">
+                <p><i class="fa-solid fa-people-group"></i> Community Support</p>
+            </div>
+        </div>
+
+        <p>At GB Rent, we are dedicated to providing a seamless experience for users seeking rental and sales options
+            for properties, vehicles, and land. Our platform offers a comprehensive selection of listings, including
+            houses, hostels, cars, and lands, catering to various needs and budgets. With a mission to make property
+            searching and listing simple and reliable, we focus on user satisfaction through trusted partnerships with
+            property owners and agents. Our team of dedicated professionals is committed to supporting our community and
+            helping users find the perfect place to stay, rent, or buy. </p>
+
+        <div class="read-more">
+            <a href="">Read More</a>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="service-section-container padding">
+    <div class="heading">
+        <h2>Our Service</h2>
+    </div>
+    <div class="service-grid-container">
+        <div class="service">
+            <i class="fa-solid fa-car"></i>
+            <h3> Car Rental & Sale</h3>
+            <p>Discover a variety of vehicles available for rent or purchase to suit your needs.</p>
+        </div>
+        <div class="service">
+            <i class="fa-solid fa-house"></i>
+            <h3> House for Rent or Sale</h3>
+            <p>Explore our listings of houses available for both rental and purchase.</p>
+        </div>
+        <div class="service">
+            <i class="fa-solid fa-landmark"></i>
+            <h3> Land for Sale</h3>
+            <p>Find ideal plots of land for sale, perfect for your future projects or investments.</p>
+        </div>
+    </div>
+
+
+</section>
+
+
+<!-- product section -->
+<section class="product-section-container padding">
+    <div class="heading">
+        <h2>Featured Properties</h2>
+    </div>
+    <div class="product-grid">
+        <div class="product-property">
+            <a href="{% url 'propertyDetail' %}">
+            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+            <div class="state">
+                <p>For Rent</p>
+            </div>
+            <div class="property-details">
+                <!-- price -->
+                <div class="price">
+                    <p>500 Gh/</p>
+                </div>
+                <!-- propery name -->
+                <div class="name">
+                    <p>A luxury villa in a park</p>
+                </div>
+
+                <!-- capacity -->
+                <div class="capacity">
+                    <p>10 Bed rooms</p>
+                </div>
+
+              
+            </div>
+           </a>
+          
+
+
+            <div class="prop">
+
+                <div class="location">
+                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
+
+                </div>
+
+
+                <div class="prop-btns">
+                    <!-- add to cart -->
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+
+                    <!-- add to fav -->
+
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+
+                    <!-- view more links -->
+                    <a href=""><i class="fa-solid fa-eye"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="product-property">
+            <a href="{% url 'propertyDetail' %}">
+            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+            <div class="state">
+                <p>For Rent</p>
+            </div>
+            <div class="property-details">
+                <!-- price -->
+                <div class="price">
+                    <p>500 Gh/</p>
+                </div>
+                <!-- propery name -->
+                <div class="name">
+                    <p>A luxury villa in a park</p>
+                </div>
+
+                <!-- capacity -->
+                <div class="capacity">
+                    <p>10 Bed rooms</p>
+                </div>
+
+              
+            </div>
+           </a>
+          
+
+
+            <div class="prop">
+
+                <div class="location">
+                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
+
+                </div>
+
+
+                <div class="prop-btns">
+                    <!-- add to cart -->
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+
+                    <!-- add to fav -->
+
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+
+                    <!-- view more links -->
+                    <a href=""><i class="fa-solid fa-eye"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="product-property">
+            <a href="{% url 'propertyDetail' %}">
+            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+            <div class="state">
+                <p>For Rent</p>
+            </div>
+            <div class="property-details">
+                <!-- price -->
+                <div class="price">
+                    <p>500 Gh/</p>
+                </div>
+                <!-- propery name -->
+                <div class="name">
+                    <p>A luxury villa in a park</p>
+                </div>
+
+                <!-- capacity -->
+                <div class="capacity">
+                    <p>10 Bed rooms</p>
+                </div>
+
+              
+            </div>
+           </a>
+          
+
+
+            <div class="prop">
+
+                <div class="location">
+                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
+
+                </div>
+
+
+                <div class="prop-btns">
+                    <!-- add to cart -->
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+
+                    <!-- add to fav -->
+
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+
+                    <!-- view more links -->
+                    <a href=""><i class="fa-solid fa-eye"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="product-property">
+            <a href="{% url 'propertyDetail' %}">
+            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+            <div class="state">
+                <p>For Rent</p>
+            </div>
+            <div class="property-details">
+                <!-- price -->
+                <div class="price">
+                    <p>500 Gh/</p>
+                </div>
+                <!-- propery name -->
+                <div class="name">
+                    <p>A luxury villa in a park</p>
+                </div>
+
+                <!-- capacity -->
+                <div class="capacity">
+                    <p>10 Bed rooms</p>
+                </div>
+
+              
+            </div>
+           </a>
+          
+
+
+            <div class="prop">
+
+                <div class="location">
+                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
+
+                </div>
+
+
+                <div class="prop-btns">
+                    <!-- add to cart -->
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+
+                    <!-- add to fav -->
+
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+
+                    <!-- view more links -->
+                    <a href=""><i class="fa-solid fa-eye"></i></a>
+                </div>
+            </div>
+        </div>
+        
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+   
+    <div class="view-all">
+        <a href="{% url 'property' %}">View all property <i class="fa-solid fa-greater-than"></i><i class="fa-solid fa-greater-than"></i>
+        </a>
+    </div>
+</section>
+
+
+
+<section class="explore-section padding">
+    <p>Looking for a dream home? </p>
+    <a href="{% url 'property' %}">Explore Properties</a>
+
+</section>
+
+
+
+
+
+
+<!-- what client say -->
+<section class="what-client-say padding">
+    <div class="heading">
+        <h2>What Client Say</h2>
+    </div>
+    <div class="client-say-container">
+        <div class="client-container">
+            <div class="client-say active">
+                <div class="client-img">
+                    <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <div class="client-detail">
+                        <h4>Mr Asare</h4>
+                        <p>Property Owner</p>
+                    </div>
+                </div>
+                <p>As an outdoor enthusiast, I find the Tenting Platform incredibly useful. It connects campers with the
+                    best sites, ensuring a seamless and enjoyable experience in nature.</p>
+            </div>
+            <div class="client-say">
+                <div class="client-img">
+                    <img src="{% static 'rent/img/prop2.jpg' %}" alt="">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <div class="client-detail">
+                        <h4>Ms. Agyeman</h4>
+                        <p>Camping Expert</p>
+                    </div>
+                </div>
+                <p>The Tenting Platform has revolutionized how we plan our trips. The variety of camping options
+                    available helps us find the perfect spot for every adventure.</p>
+            </div>
+            <div class="client-say">
+                <div class="client-img">
+                    <img src="{% static 'rent/img/prop2.jpg' %}" alt="">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <div class="client-detail">
+                        <h4>Mr. Mensah</h4>
+                        <p>Family Camper</p>
+                    </div>
+                </div>
+                <p>With the Tenting Platform, I can easily browse and book campsites. The user-friendly interface and
+                    clear information make planning our family trips a breeze!</p>
+            </div>
+            <div class="next-btn">
+                <i class="fa-solid fa-less-than" id="prevBtn"></i>
+                <i class="fa-solid fa-greater-than" id="nextBtn"></i>
+            </div>
+        </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
 
 {% endblock %}
