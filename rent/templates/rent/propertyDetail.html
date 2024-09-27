@@ -1,0 +1,115 @@
+{% extends 'rent/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<body class="property-page">
+    
+
+<!-- banner -->
+<div class="banner-container padding">
+    <h1> Property Detail
+    </h1>
+
+</div>
+
+
+<div class="property-detail-container padding">
+    <div class="propert-images">
+        <div class="big-img">
+            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+        </div>
+        <div class="small-img">
+            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+        </div>
+    </div>
+
+
+
+    <div class="detail-for-property">
+      <div class="detail-row  row-2">
+        <div class="d-1">
+            <p>Single Room</p>
+            <p>1 Bathroom(s)
+
+            </p>
+        </div>
+        <div class="d-2">
+            <p> Cozy studio unit with private washroom & kitchenette. Modern finishes, ample storage & natural light. Convenient location near amenities. Ideal urban living space. Located at Dome in Accra.</p>
+        </div>
+        <div class="d-3">
+            <h4>What this place offers ?</h4>
+            <li> CCTV Camera</li>
+            <li> CCTV Camera</li>
+            <li> CCTV Camera</li>
+            <li> CCTV Camera</li>
+        </div>
+
+      </div>
+
+
+      <div class="detail-row row-3">
+        <div class="d-price">
+            <h4>500 Gh  <br> <span>per month </span>  </h4>
+        </div>
+           <div class="availability">
+            <p>Available</p>
+           </div>
+        <p>Until this property is vacant, it is unavailable for viewings. Please join the waitlist if you're still interested in moving into this property when the current tenant moves out. </p>
+
+        <div class="wishlist">
+        <a href="">
+            <button>Join wish</button>
+        </a>
+        </div>
+
+        <div class="report">
+            <a href="">Report a property</a>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+<div class="map">
+    <h4>Where you will be </h4>
+    <p>LavisionDyan Beauty&Spa Salon, Accra, Ghana, Greater Accra
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.5972873975784!2d-0.2766762252188625!3d5.626313632939053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf98c25ce18e1d%3A0xa488794859304f7!2sPentecost%20University!5e0!3m2!1sen!2sus!4v1727450677850!5m2!1sen!2sus"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </p>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

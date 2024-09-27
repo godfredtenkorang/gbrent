@@ -10,8 +10,295 @@
     {% else %}
     <title>GB Rent</title>
     {% endif %}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+
+
+
 </head>
 <body>
+
+    <!-- header -->
+     <header>
+        <!-- first header -->
+         <div class="first-header-container padding">
+            <div class="first-header-row">
+                <a href=""><i class="fa-solid fa-envelope"></i> infogbrent@gmail.com</a>
+                <a href=""><i class="fa-solid fa-phone"></i> 0558156844</a>
+            </div>
+            <div class="first-header-row">
+                <a href="https://web.facebook.com/gh.kojosweet.5"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.tiktok.com/@benjaminoheneasare?lang=en"> <i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://github.com/Benjamin-Ohene-Asare"> <i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/benjamin-ohene-asare/"> <i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://wa.link/8gw4oo"> <i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+         </div>
+
+         <!-- second-header -->
+          <div class="second-header-container padding">
+            <nav class="nav-links">
+                <div class="logo">
+                    
+                    <a href="{% url 'index' %}"><i class="fa-solid fa-house"></i>  GB<span>RENT </span></a>
+                </div>
+                <ul class="menu-links ">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li class="dropdown">Poperty        <i class="fa-solid fa-caret-down"></i> 
+
+
+                        <!-- propert-category -->
+                      <ul class="category">
+   
+    <li><a href="{% url 'property' %}">House for Rent</a></li>
+    <li><a href="{% url 'property' %}">House for Sale</a></li>
+    <li><a href="{% url 'property' %}">Car for Rent</a></li>
+    <li><a href="{% url 'property' %}">Car for Sale</a></li>
+    <li><a href="{% url 'property' %}">Lands for Sale</a></li>
+    <li><a href="{% url 'property' %}">Hostel for Rent</a></li>
+   
+</ul>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    </li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Home</a></li>
+                </ul>
+                <div class="menu-icon">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+
+          </div>
+     </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {% block content %}{% endblock %}
+
+
+
+<div class="navigation-btns">
+    <div class="nav">
+      <a href="">   <i class="fa-solid fa-house"></i> <br> <span> Home </span> </a>
+    </div>
+    <div class="nav">
+        <a href=""><i class="fa-solid fa-cart-shopping"></i> <br> <span> Cart </span> </a>
+    </div>
+    <div class="nav">
+        <a href=""><i class="fa-solid fa-heart"></i><br> <span> Favourite </span> </a>
+    </div>
+   
+    <div class="nav">
+        <a href=""><i class="fa-solid fa-clipboard-list"></i>
+            <br> <span> Bookings </span> </a>
+    </div>
+
+</div>
+
+
+    <footer>
+        <div class="footer padding">
+            <div class="footer-col">
+                <p> Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.</p>
+                <p>Ghana</p>
+                <a href=""><i class="fa-solid fa-envelope"></i> infogbrent@gmail.com</a> <br>
+                <a href=""><i class="fa-solid fa-phone"></i> 0558156844</a> <br>
+              <div class="socials">
+                <a href=""><i class="fa-brands fa-facebook"></i> </a> 
+                <a href=""><i class="fa-brands fa-instagram"></i> </a> 
+                <a href=""><i class="fa-brands fa-tiktok"></i> </a> 
+              </div>
+            </div>
+            <div class="footer-col">
+               <h5>Company</h5>
+               <li><a href="">About</a></li>
+               <li><a href="">Blog</a></li>
+               <li><a href="">All Product</a></li>
+               <li><a href="">FAQ</a></li>
+               <li><a href="">Contact us</a></li>
+        
+            </div>
+            <div class="footer-col">
+               <h5>Services</h5>
+               <li><a href="">Order tracking</a></li>
+               <li><a href="">Wish list</a></li>
+               <li><a href="">Login</a></li>
+               <li><a href="">My account</a></li>
+               <li><a href="">Terms & conditions</a></li>
+             
+            </div>
+            
+            <div class="footer-col">
+               <h5>Newsletter</h5>
+               <p>Subscribe to our weekly Newsletter and receive updates via email. </p>
+
+               <form action="">
+                <input type="text" placeholder="Email"> <button>Subscribe</button>
+               </form>
+              
+            </div>
+            
+        </div>
+
+        <div class="copy-right padding">
+            <p> All Rights Reserved @ Company
+
+            </p>
+            <li><a href="">Terms & conditions</a></li>
+        </div>
+
+    </footer>
+
+
+
+<script>
+    const secondheadercontainer = document.querySelector(".second-header-container")
+
+window.addEventListener("scroll",()=>{
+    if(window.scrollY > 20){
+        secondheadercontainer.classList.add("sticky")
+    }
+    else{
+        secondheadercontainer.classList.remove("sticky")
+    }
+})
+
+</script>
+<script>
+    const navigavtionBtn = document.querySelector(".navigation-btns")
+
+    window.addEventListener("scroll",()=>{
+        const scrollFromTop = window.scrollY
+        const windowHeight = window.innerHeight
+        const documentHeight = document.body.offsetHeight
+
+
+        if(scrollFromTop > 50 && (windowHeight + scrollFromTop) < documentHeight){
+            navigavtionBtn.classList.add("stickyNav")
+        } else if((windowHeight + scrollFromTop) >= documentHeight){
+            navigavtionBtn.classList.remove("stickyNav")
+        }else{
+            navigavtionBtn.classList.remove("stickyNav") 
+        }
+        
+    })
+
+
+
+
+
+</script>
+
+
+<script>
+   
+   const testimonials = document.querySelectorAll('.client-say');
+let currentIndex = 0;
+
+function showTestimonial(index) {
+    testimonials.forEach((testimonial, i) => {
+        testimonial.classList.toggle('active', i === index);
+    });
+}
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % testimonials.length; // Cycle back to the first
+    showTestimonial(currentIndex);
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length; // Cycle back to the last
+    showTestimonial(currentIndex);
+});
+
+// Initialize the first testimonial
+showTestimonial(currentIndex);
+
+
+</script>
+
+<script>
+   const categoty = document.querySelector(".category") 
+   const dropdown= document.querySelector(".dropdown") 
+   dropdown.addEventListener("click",()=>{
+    categoty.classList.toggle('show-cat')
+   })
+
+
+</script>
+
+
+<script>
+    const falist = document.querySelector(".fa-list");
+    const productgrid = document.querySelector(".product-grid");
+
+    // Check if there's a saved state in localStorage when the page loads
+    window.addEventListener("load", () => {
+        const savedView = localStorage.getItem("productView");
+        if (savedView === "list") {
+            productgrid.classList.add("gridone");
+        }
+    });
+
+    // Toggle the class and save the state in localStorage when the button is clicked
+    falist.addEventListener("click", () => {
+        productgrid.classList.toggle("gridone");
+
+        // Save the state in localStorage
+        if (productgrid.classList.contains("gridone")) {
+            localStorage.setItem("productView", "list");
+        } else {
+            localStorage.setItem("productView", "grid");
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
