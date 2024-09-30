@@ -26,7 +26,7 @@ body{
 }
 
 .padding{
-    padding: 10px 8%;
+    padding: 5% 8%;
 }
 .margin{
     margin: 10px 8%;
@@ -105,6 +105,7 @@ header a{
     align-items: center;
     gap: 2rem;
     min-height: 7vh;
+    padding: 10px 8%;
 }
 
 .first-header-container{
@@ -606,6 +607,7 @@ a .name, a p{
 
 /* footer */
 footer{
+    margin-top: 7%;
     background-color: var(--blueColor);
     width: 100%;
     min-height: 40vh;
@@ -667,6 +669,7 @@ footer{
 border-radius: 50%;
 }
 .copy-right{
+    padding: 10px 8%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -1689,7 +1692,10 @@ object-fit: cover;
 /* responsiveness */
 @media (max-width:1080px){
     .padding , .r-pad{
-        padding: 10px 6%;
+        padding: 10% 6%;
+    }
+    .first-header-container, .nav-links{
+        padding: 0 10px;
     }
     .map{
         padding: 5% 6%;
@@ -1703,6 +1709,9 @@ object-fit: cover;
 
     .product-grid{
         grid-template-columns: 1fr 1fr;
+    }
+    .copy-right{
+        padding: 10px 6%;
     }
 }
 @media (max-width: 768px) {
@@ -1768,7 +1777,7 @@ display: none;
     }
     .about-text h2{
         font-size: 2rem;
-        text-align: center;
+    
         
     }
     .product-grid, .service-grid-container{
@@ -1944,6 +1953,16 @@ height: 30vh;
 }
 .padd{
     padding: 0;
+}
+.about-section{
+    grid-template-columns: 1fr;
+}
+.sign-up h2{
+    font-size: 1rem;
+}
+.heading{
+    text-align: left;
+    font-size: 1.3rem;
 }
 }
 
