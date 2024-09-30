@@ -77,14 +77,14 @@
             helping users find the perfect place to stay, rent, or buy. </p>
 
         <div class="read-more">
-            <a href="">Read More</a>
+            <a href="{% url 'about' %}">Read More</a>
         </div>
 
     </div>
 </section>
 
 
-<section class="service-section-container padding">
+<!-- <section class="service-section-container padding">
     <div class="heading">
         <h2>Our Service</h2>
     </div>
@@ -107,7 +107,7 @@
     </div>
 
 
-</section>
+</section> -->
 
 
 <!-- product section -->
@@ -118,7 +118,7 @@
     <div class="product-grid">
         <div class="product-property">
             <a href="{% url 'propertyDetail' %}">
-            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+            <img src="{% static 'rent/img/2024-02-06.jpg' %}" alt="">
             <div class="state">
                 <p>For Rent</p>
             </div>
@@ -333,14 +333,27 @@
 </section>
 
 
-
+<!-- 
 <section class="explore-section padding">
     <p>Looking for a dream home? </p>
     <a href="{% url 'property' %}">Explore Properties</a>
 
-</section>
+</section> -->
 
 
+ 
+<div class="redy-container padd">
+    <div class="ready">
+        <img src="{% static 'rent/img/why.jpg' %}" alt="">
+    </div>
+    <div class="ready r-pad">
+      <h3>Ready to join our community of tenants? </h3>
+      <p>We are forging a new generation of happy and protected tenants across Africa who enjoy a unique and tailored experience, build their credit identity and thus are financially empowered. </p>
+
+      <a href="">Explore more homes</a>
+    </div>
+ 
+</div>
 
 
 
@@ -388,7 +401,7 @@
                 <p>With the Tenting Platform, I can easily browse and book campsites. The user-friendly interface and
                     clear information make planning our family trips a breeze!</p>
             </div>
-            <div class="next-btn">
+            <div class="next-btns">
                 <i class="fa-solid fa-less-than" id="prevBtn"></i>
                 <i class="fa-solid fa-greater-than" id="nextBtn"></i>
             </div>

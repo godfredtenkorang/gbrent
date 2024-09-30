@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link
     rel="stylesheet"
@@ -54,7 +55,7 @@
                 </div>
                 <ul class="menu-links ">
                     <li><a href="{% url 'index' %}">Home</a></li>
-                    <li><a href="">About</a></li>
+
                     <li class="dropdown">Poperty        <i class="fa-solid fa-caret-down"></i> 
 
 
@@ -77,10 +78,15 @@
                     
                     
                     </li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Home</a></li>
+
+
+
+
+
+
+                    <li><a href="{% url 'about' %}">About</a></li>
+      
+                   
                 </ul>
                 <div class="menu-icon">
                     <i class="fa-solid fa-bars"></i>
@@ -156,11 +162,12 @@
             </div>
             <div class="footer-col">
                <h5>Services</h5>
-               <li><a href="">Order tracking</a></li>
+              
                <li><a href="">Wish list</a></li>
-               <li><a href="">Login</a></li>
+               <li><a href="{% url 'login' %}">Login</a></li>
                <li><a href="">My account</a></li>
                <li><a href="">Terms & conditions</a></li>
+               <li><a href="{% url 'tenant' %}">Become a tenant</a></li>
              
             </div>
             
@@ -185,7 +192,96 @@
 
     </footer>
 
-
+    <script>
+        const slider = document.querySelector('.slider');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        
+        let isDragging = false;
+        let startPos = 0;
+        let currentTranslate = 0;
+        let prevTranslate = 0;
+        let animationID;
+        let currentIndexs = 0;
+        
+        const images = document.querySelectorAll('.slider img');
+        const totalImages = images.length;
+        
+        prevBtn.addEventListener('click', () => {
+            if (currentIndexs > 0) {
+                currentIndexs--;
+            } else {
+                currentIndexs = totalImages - 1; // Loop back to the last slide
+            }
+            updateSliderPosition();
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            if (currentIndexs < totalImages - 1) {
+                currentIndexs++;
+            } else {
+                currentIndexs = 0; // Loop back to the first slide
+            }
+            updateSliderPosition();
+        });
+        
+        slider.addEventListener('mousedown', startDragging);
+        slider.addEventListener('touchstart', startDragging);
+        slider.addEventListener('mouseup', stopDragging);
+        slider.addEventListener('touchend', stopDragging);
+        slider.addEventListener('mousemove', drag);
+        slider.addEventListener('touchmove', drag);
+        
+        function startDragging(e) {
+            isDragging = true;
+            startPos = getPositionX(e);
+            animationID = requestAnimationFrame(animation);
+            slider.style.cursor = 'grabbing';
+        }
+        
+        function stopDragging() {
+            isDragging = false;
+            cancelAnimationFrame(animationID);
+            const movedBy = currentTranslate - prevTranslate;
+        
+            if (movedBy < -100) {
+                currentIndexs = (currentIndexs + 1) % totalImages; // Loop forward
+            }
+            if (movedBy > 100) {
+                currentIndexs = (currentIndexs - 1 + totalImages) % totalImages; // Loop backward
+            }
+        
+            updateSliderPosition();
+            slider.style.cursor = 'grab';
+        }
+        
+        function drag(e) {
+            if (isDragging) {
+                const currentPosition = getPositionX(e);
+                currentTranslate = prevTranslate + currentPosition - startPos;
+            }
+        }
+        
+        function getPositionX(e) {
+            return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+        }
+        
+        function animation() {
+            setSliderPosition();
+            if (isDragging) requestAnimationFrame(animation);
+        }
+        
+        function setSliderPosition() {
+            slider.style.transform = `translateX(${currentTranslate}px)`;
+        }
+        
+        function updateSliderPosition() {
+            currentTranslate = currentIndexs * -slider.offsetWidth;
+            prevTranslate = currentTranslate;
+            setSliderPosition();
+        }
+        </script>
+        
 
 <script>
     const secondheadercontainer = document.querySelector(".second-header-container")
