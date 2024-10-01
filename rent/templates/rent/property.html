@@ -2,424 +2,486 @@
 {% load static %}
 
 {% block content %}
+<style>
+    .explore-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--whiteColor);
+        margin-bottom: 5%;
+        background-size: cover;
+        width: 100%;
+        height: 40vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+        url("{% static 'rent/img/banner.jpg' %}");
+    }
 
+    .banner-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--whiteColor);
+        margin-bottom: 5%;
+        background-size: cover;
+        width: 100%;
+        height: 40vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+        url("{% static 'rent/img/banner.jpg' %}");
+    }
+</style>
 
 <body class="property-page">
-    
-
-<!-- banner -->
-<div class="banner-container padding">
-    <h1> Property Grid
-    </h1>
-
-</div>
 
 
-<div class="list-search padding">
-    <!-- <div class="list">
+    <!-- banner -->
+    <div class="banner-container padding">
+        <h1> List of properties
+        </h1>
+
+    </div>
+
+
+    <div class="list-search padding">
+        <!-- <div class="list">
         
 
         <i class="fa-solid fa-list"></i>
     </div> -->
-    <div class="search-bar">
-        <form action="">
-            <input type="text" placeholder="search-bar">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
+        <div class="search-bar">
+            <form action="">
+                <input type="text" placeholder="search-bar">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
     </div>
-</div>
 
 
 
-<!-- product section -->
-<section class="product-section-container padding">
-    
-    <div class="product-grid">
-        <div class="product-property">
-            <a href="{% url 'propertyDetail' %}">
-            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
-            <div class="state">
-                <p>For Rent</p>
-            </div>
-            <div class="property-details">
-                <!-- price -->
-                <div class="price">
-                    <p>500 Gh/</p>
-                </div>
-                <!-- propery name -->
-                <div class="name">
-                    <p>A luxury villa in a park</p>
-                </div>
+    <!-- product section -->
+    <section class="product-section-container padding">
 
-                <!-- capacity -->
-                <div class="capacity">
-                    <p>10 Bed rooms</p>
-                </div>
-
-              
-            </div>
-           </a>
-          
+        <div class="product-grid">
+            <div class="product-property">
+                <a href="{% url 'propertyDetail' %}">
+                    <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+                    <div class="state">
+                        <p>For Rent</p>
+                    </div>
+                    <div class="property-details">
+                        <!-- price -->
+                        <div class="cap-price">
+                            <!-- capacity -->
+                            <div class="capacity">
+                                <p>10 Bed rooms</p>
+                            </div>
+                            <div class="price">
+                                <p>500 Gh / per month</p>
+                            </div>
+                        </div>
+                       
+                        <!-- propery name -->
+                        <div class="name">
+                            <p>A luxury villa in a park</p>
+                        </div>
 
 
-            <div class="prop">
 
-                <div class="location">
-                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
-
-                </div>
+                    </div>
+                </a>
 
 
-                <div class="prop-btns">
-                    <!-- add to cart -->
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
 
-                    <!-- add to fav -->
+                <div class="prop">
 
-                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <div class="location">
+                        <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
 
-                    <!-- view more links -->
-                    <a href=""><i class="fa-solid fa-eye"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="product-property">
-            <a href="{% url 'propertyDetail' %}">
-            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
-            <div class="state">
-                <p>For Rent</p>
-            </div>
-            <div class="property-details">
-                <!-- price -->
-                <div class="price">
-                    <p>500 Gh/</p>
-                </div>
-                <!-- propery name -->
-                <div class="name">
-                    <p>A luxury villa in a park</p>
-                </div>
-
-                <!-- capacity -->
-                <div class="capacity">
-                    <p>10 Bed rooms</p>
-                </div>
-
-              
-            </div>
-           </a>
-          
+                    </div>
 
 
-            <div class="prop">
+                    <div class="prop-btns">
+                        <!-- add to cart -->
+                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
 
-                <div class="location">
-                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
+                        <!-- add to fav -->
 
-                </div>
+                        <a href="{% url 'wishListPage' %}"><i class="fa-solid fa-heart"></i></a>
 
-
-                <div class="prop-btns">
-                    <!-- add to cart -->
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-
-                    <!-- add to fav -->
-
-                    <a href=""><i class="fa-solid fa-heart"></i></a>
-
-                    <!-- view more links -->
-                    <a href=""><i class="fa-solid fa-eye"></i></a>
+                        <!-- view more links -->
+                        <a href=""><i class="fa-solid fa-eye"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="product-property">
-            <a href="{% url 'propertyDetail' %}">
-            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
-            <div class="state">
-                <p>For Rent</p>
-            </div>
-            <div class="property-details">
-                <!-- price -->
-                <div class="price">
-                    <p>500 Gh/</p>
-                </div>
-                <!-- propery name -->
-                <div class="name">
-                    <p>A luxury villa in a park</p>
-                </div>
-
-                <!-- capacity -->
-                <div class="capacity">
-                    <p>10 Bed rooms</p>
-                </div>
-
-              
-            </div>
-           </a>
-          
+            <div class="product-property">
+                <a href="{% url 'propertyDetail' %}">
+                    <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+                    <div class="state">
+                        <p>For Rent</p>
+                    </div>
+                    <div class="property-details">
+                        <!-- price -->
+                        <div class="cap-price">
+                            <!-- capacity -->
+                            <div class="capacity">
+                                <p>10 Bed rooms</p>
+                            </div>
+                            <div class="price">
+                                <p>500 Gh / per month</p>
+                            </div>
+                        </div>
+                       
+                        <!-- propery name -->
+                        <div class="name">
+                            <p>A luxury villa in a park</p>
+                        </div>
 
 
-            <div class="prop">
 
-                <div class="location">
-                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
-
-                </div>
+                    </div>
+                </a>
 
 
-                <div class="prop-btns">
-                    <!-- add to cart -->
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
 
-                    <!-- add to fav -->
+                <div class="prop">
 
-                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <div class="location">
+                        <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
 
-                    <!-- view more links -->
-                    <a href=""><i class="fa-solid fa-eye"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="product-property">
-            <a href="{% url 'propertyDetail' %}">
-            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
-            <div class="state">
-                <p>For Rent</p>
-            </div>
-            <div class="property-details">
-                <!-- price -->
-                <div class="price">
-                    <p>500 Gh/</p>
-                </div>
-                <!-- propery name -->
-                <div class="name">
-                    <p>A luxury villa in a park</p>
-                </div>
-
-                <!-- capacity -->
-                <div class="capacity">
-                    <p>10 Bed rooms</p>
-                </div>
-
-              
-            </div>
-           </a>
-          
+                    </div>
 
 
-            <div class="prop">
+                    <div class="prop-btns">
+                        <!-- add to cart -->
+                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
 
-                <div class="location">
-                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
+                        <!-- add to fav -->
 
-                </div>
+                        <a href="{% url 'wishListPage' %}"><i class="fa-solid fa-heart"></i></a>
 
-
-                <div class="prop-btns">
-                    <!-- add to cart -->
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-
-                    <!-- add to fav -->
-
-                    <a href=""><i class="fa-solid fa-heart"></i></a>
-
-                    <!-- view more links -->
-                    <a href=""><i class="fa-solid fa-eye"></i></a>
+                        <!-- view more links -->
+                        <a href=""><i class="fa-solid fa-eye"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="product-property">
-            <a href="{% url 'propertyDetail' %}">
-            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
-            <div class="state">
-                <p>For Rent</p>
-            </div>
-            <div class="property-details">
-                <!-- price -->
-                <div class="price">
-                    <p>500 Gh/</p>
-                </div>
-                <!-- propery name -->
-                <div class="name">
-                    <p>A luxury villa in a park</p>
-                </div>
-
-                <!-- capacity -->
-                <div class="capacity">
-                    <p>10 Bed rooms</p>
-                </div>
-
-              
-            </div>
-           </a>
-          
+         
+            <div class="product-property">
+                <a href="{% url 'propertyDetail' %}">
+                    <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+                    <div class="state">
+                        <p>For Rent</p>
+                    </div>
+                    <div class="property-details">
+                        <!-- price -->
+                        <div class="cap-price">
+                            <!-- capacity -->
+                            <div class="capacity">
+                                <p>10 Bed rooms</p>
+                            </div>
+                            <div class="price">
+                                <p>500 Gh / per month</p>
+                            </div>
+                        </div>
+                       
+                        <!-- propery name -->
+                        <div class="name">
+                            <p>A luxury villa in a park</p>
+                        </div>
 
 
-            <div class="prop">
 
-                <div class="location">
-                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
-
-                </div>
+                    </div>
+                </a>
 
 
-                <div class="prop-btns">
-                    <!-- add to cart -->
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
 
-                    <!-- add to fav -->
+                <div class="prop">
 
-                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <div class="location">
+                        <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
 
-                    <!-- view more links -->
-                    <a href=""><i class="fa-solid fa-eye"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="product-property">
-            <a href="{% url 'propertyDetail' %}">
-            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
-            <div class="state">
-                <p>For Rent</p>
-            </div>
-            <div class="property-details">
-                <!-- price -->
-                <div class="price">
-                    <p>500 Gh/</p>
-                </div>
-                <!-- propery name -->
-                <div class="name">
-                    <p>A luxury villa in a park</p>
-                </div>
-
-                <!-- capacity -->
-                <div class="capacity">
-                    <p>10 Bed rooms</p>
-                </div>
-
-              
-            </div>
-           </a>
-          
+                    </div>
 
 
-            <div class="prop">
+                    <div class="prop-btns">
+                        <!-- add to cart -->
+                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
 
-                <div class="location">
-                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
+                        <!-- add to fav -->
 
-                </div>
+                        <a href="{% url 'wishListPage' %}"><i class="fa-solid fa-heart"></i></a>
 
-
-                <div class="prop-btns">
-                    <!-- add to cart -->
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-
-                    <!-- add to fav -->
-
-                    <a href=""><i class="fa-solid fa-heart"></i></a>
-
-                    <!-- view more links -->
-                    <a href=""><i class="fa-solid fa-eye"></i></a>
+                        <!-- view more links -->
+                        <a href=""><i class="fa-solid fa-eye"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="product-property">
-            <a href="{% url 'propertyDetail' %}">
-            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
-            <div class="state">
-                <p>For Rent</p>
-            </div>
-            <div class="property-details">
-                <!-- price -->
-                <div class="price">
-                    <p>500 Gh/</p>
-                </div>
-                <!-- propery name -->
-                <div class="name">
-                    <p>A luxury villa in a park</p>
-                </div>
-
-                <!-- capacity -->
-                <div class="capacity">
-                    <p>10 Bed rooms</p>
-                </div>
-
-              
-            </div>
-           </a>
-          
+         
+            <div class="product-property">
+                <a href="{% url 'propertyDetail' %}">
+                    <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+                    <div class="state">
+                        <p>For Rent</p>
+                    </div>
+                    <div class="property-details">
+                        <!-- price -->
+                        <div class="cap-price">
+                            <!-- capacity -->
+                            <div class="capacity">
+                                <p>10 Bed rooms</p>
+                            </div>
+                            <div class="price">
+                                <p>500 Gh / per month</p>
+                            </div>
+                        </div>
+                       
+                        <!-- propery name -->
+                        <div class="name">
+                            <p>A luxury villa in a park</p>
+                        </div>
 
 
-            <div class="prop">
 
-                <div class="location">
-                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
-
-                </div>
+                    </div>
+                </a>
 
 
-                <div class="prop-btns">
-                    <!-- add to cart -->
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
 
-                    <!-- add to fav -->
+                <div class="prop">
 
-                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <div class="location">
+                        <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
 
-                    <!-- view more links -->
-                    <a href=""><i class="fa-solid fa-eye"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="product-property">
-            <a href="{% url 'propertyDetail' %}">
-            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
-            <div class="state">
-                <p>For Rent</p>
-            </div>
-            <div class="property-details">
-                <!-- price -->
-                <div class="price">
-                    <p>500 Gh/</p>
-                </div>
-                <!-- propery name -->
-                <div class="name">
-                    <p>A luxury villa in a park</p>
-                </div>
-
-                <!-- capacity -->
-                <div class="capacity">
-                    <p>10 Bed rooms</p>
-                </div>
-
-              
-            </div>
-           </a>
-          
+                    </div>
 
 
-            <div class="prop">
+                    <div class="prop-btns">
+                        <!-- add to cart -->
+                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
 
-                <div class="location">
-                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
+                        <!-- add to fav -->
 
-                </div>
+                        <a href="{% url 'wishListPage' %}"><i class="fa-solid fa-heart"></i></a>
 
-
-                <div class="prop-btns">
-                    <!-- add to cart -->
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-
-                    <!-- add to fav -->
-
-                    <a href=""><i class="fa-solid fa-heart"></i></a>
-
-                    <!-- view more links -->
-                    <a href=""><i class="fa-solid fa-eye"></i></a>
+                        <!-- view more links -->
+                        <a href=""><i class="fa-solid fa-eye"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
+         
+            <div class="product-property">
+                <a href="{% url 'propertyDetail' %}">
+                    <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+                    <div class="state">
+                        <p>For Rent</p>
+                    </div>
+                    <div class="property-details">
+                        <!-- price -->
+                        <div class="cap-price">
+                            <!-- capacity -->
+                            <div class="capacity">
+                                <p>10 Bed rooms</p>
+                            </div>
+                            <div class="price">
+                                <p>500 Gh / per month</p>
+                            </div>
+                        </div>
+                       
+                        <!-- propery name -->
+                        <div class="name">
+                            <p>A luxury villa in a park</p>
+                        </div>
+
+
+
+                    </div>
+                </a>
+
+
+
+                <div class="prop">
+
+                    <div class="location">
+                        <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
+
+                    </div>
+
+
+                    <div class="prop-btns">
+                        <!-- add to cart -->
+                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+
+                        <!-- add to fav -->
+
+                        <a href="{% url 'wishListPage' %}"><i class="fa-solid fa-heart"></i></a>
+
+                        <!-- view more links -->
+                        <a href=""><i class="fa-solid fa-eye"></i></a>
+                    </div>
+                </div>
+            </div>
+         
+            <div class="product-property">
+                <a href="{% url 'propertyDetail' %}">
+                    <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+                    <div class="state">
+                        <p>For Rent</p>
+                    </div>
+                    <div class="property-details">
+                        <!-- price -->
+                        <div class="cap-price">
+                            <!-- capacity -->
+                            <div class="capacity">
+                                <p>10 Bed rooms</p>
+                            </div>
+                            <div class="price">
+                                <p>500 Gh / per month</p>
+                            </div>
+                        </div>
+                       
+                        <!-- propery name -->
+                        <div class="name">
+                            <p>A luxury villa in a park</p>
+                        </div>
+
+
+
+                    </div>
+                </a>
+
+
+
+                <div class="prop">
+
+                    <div class="location">
+                        <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
+
+                    </div>
+
+
+                    <div class="prop-btns">
+                        <!-- add to cart -->
+                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+
+                        <!-- add to fav -->
+
+                        <a href="{% url 'wishListPage' %}"><i class="fa-solid fa-heart"></i></a>
+
+                        <!-- view more links -->
+                        <a href=""><i class="fa-solid fa-eye"></i></a>
+                    </div>
+                </div>
+            </div>
+         
+            <div class="product-property">
+                <a href="{% url 'propertyDetail' %}">
+                    <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+                    <div class="state">
+                        <p>For Rent</p>
+                    </div>
+                    <div class="property-details">
+                        <!-- price -->
+                        <div class="cap-price">
+                            <!-- capacity -->
+                            <div class="capacity">
+                                <p>10 Bed rooms</p>
+                            </div>
+                            <div class="price">
+                                <p>500 Gh / per month</p>
+                            </div>
+                        </div>
+                       
+                        <!-- propery name -->
+                        <div class="name">
+                            <p>A luxury villa in a park</p>
+                        </div>
+
+
+
+                    </div>
+                </a>
+
+
+
+                <div class="prop">
+
+                    <div class="location">
+                        <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
+
+                    </div>
+
+
+                    <div class="prop-btns">
+                        <!-- add to cart -->
+                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+
+                        <!-- add to fav -->
+
+                        <a href="{% url 'wishListPage' %}"><i class="fa-solid fa-heart"></i></a>
+
+                        <!-- view more links -->
+                        <a href=""><i class="fa-solid fa-eye"></i></a>
+                    </div>
+                </div>
+            </div>
+         
+            <div class="product-property">
+                <a href="{% url 'propertyDetail' %}">
+                    <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+                    <div class="state">
+                        <p>For Rent</p>
+                    </div>
+                    <div class="property-details">
+                        <!-- price -->
+                        <div class="cap-price">
+                            <!-- capacity -->
+                            <div class="capacity">
+                                <p>10 Bed rooms</p>
+                            </div>
+                            <div class="price">
+                                <p>500 Gh / per month</p>
+                            </div>
+                        </div>
+                       
+                        <!-- propery name -->
+                        <div class="name">
+                            <p>A luxury villa in a park</p>
+                        </div>
+
+
+
+                    </div>
+                </a>
+
+
+
+                <div class="prop">
+
+                    <div class="location">
+                        <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
+
+                    </div>
+
+
+                    <div class="prop-btns">
+                        <!-- add to cart -->
+                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+
+                        <!-- add to fav -->
+
+                        <a href="{% url 'wishListPage' %}"><i class="fa-solid fa-heart"></i></a>
+
+                        <!-- view more links -->
+                        <a href=""><i class="fa-solid fa-eye"></i></a>
+                    </div>
+                </div>
+            </div>
+         
       
+         
 
 
 
@@ -430,13 +492,22 @@
 
 
 
+        </div>
+
+    </section>
 
 
 
+    <!-- 
 
-    </div>
-   
-</section>
+<section class="explore-section padding">
+    <p>Could'nt find what you are looking for? </p>
+    <a href=>Send a request</a>
+
+</section> -->
+
+
+
 </body>
 
 

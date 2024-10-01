@@ -1,0 +1,84 @@
+{% extends 'rent/userDashboard.html' %}
+{% load static %}
+
+{% block content %}
+
+
+
+
+
+<div class="wishlist-container">
+    <h2>Wish List</h2>
+    <table class="wishlist-table">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Number of Rooms</th>
+                <th>Type</th>
+                <th>Availability</th>
+                <th>Action</th>
+                <th>View More</th>
+            </tr>
+        </thead>
+        <tbody id="wishlistBody">
+            <tr>
+                <td> <img src="{% static 'rent/img/2024-02-06.jpg' %}" alt=""></td>
+                <td>Cozy Villa</td>
+                <td>$1,200/month</td>
+                <td>3</td>
+                <td>Apartment</td>
+                <td class="available">Available</td>
+                <td><button class="action-btn">Remove</button></td>
+                <td><button class="view-more-btn">View More</button></td>
+            </tr>
+            <tr>
+                <td> <img src="{% static 'rent/img/2024-02-06.jpg' %}" alt=""></td>
+                <td>Luxury Suite</td>
+                <td>$3,500/month</td>
+                <td>5</td>
+                <td>Single</td>
+                <td class="not-available">Not Available</td>
+                <td><button class="action-btn">Remove</button></td>
+                <td><button class="view-more-btn">View More</button></td>
+            </tr>
+            <tr>
+                <td> <img src="{% static 'rent/img/2024-02-06.jpg' %}" alt=""></td>
+                <td>Luxury Suite</td>
+                <td>$3,500/month</td>
+                <td>5</td>
+                <td>Single</td>
+                <td class="not-available">Not Available</td>
+                <td><button class="action-btn">Remove</button></td>
+                <td><button class="view-more-btn">View More</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<a href="" class="expo">Explore More Homes </a>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

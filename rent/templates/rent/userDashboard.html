@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+    <link rel="stylesheet" href="{% static 'rent/styles.css' %}">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="headers">
+            <button class="toggle-btn" id="toggleBtn">&#9776;</button>
+
+        </div>
+        <div class="dashboard">
+           
+            <!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="logos">
+                    <a href="{% url 'index' %}">Logo</a>
+                </div>
+
+               <div class="user">
+                <div class="user-p">
+                    <p>B</p>
+                </div>
+                <p>Welcom Back Benjamin</p>
+               </div>
+
+
+                <ul>
+                    <li><a href="{% url 'dashboardHome' %}"><i class="fa-solid fa-house"></i>  Home</a></li>
+                    <li><a href="{% url 'schedule' %}"><i class="fa-solid fa-calendar-days"></i> Schduled</a></li>
+                    <li><a href="{% url 'wishListPage' %}"><i class="fa-solid fa-heart"></i> Saved</a></li>
+                    <li><a href="{% url 'help' %}"><i class="fa-solid fa-phone"></i> Help Center</a></li>
+                    <li><a href="{% url 'account' %}"><i class="fa-solid fa-user"></i> Account Settings</a></li>
+                    <li><a href=""><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Sidebar Toggle Button (visible on mobile) -->
+
+               
+
+
+
+                {% block content %}{% endblock %}
+
+
+
+
+
+
+                
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+            
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const sidebar = document.getElementById('sidebar');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

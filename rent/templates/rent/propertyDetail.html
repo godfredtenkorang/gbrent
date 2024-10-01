@@ -8,27 +8,39 @@
     
 
 <!-- banner -->
-<div class="banner-container padding">
+<!-- <div class="banner-container padding">
     <h1> Property Detail
     </h1>
 
-</div>
+</div> -->
 
 
-<div class="property-detail-container padding">
+<div class="property-detail-container ">
     <div class="propert-images">
         <div class="big-img">
-            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+            <div class="slider">
+                <img src="{% static 'rent/img/2024-02-06.jpg' %}" alt="">
+                <img src="{% static 'rent/img/prop2.jpg' %}" alt="">
+                <img src="{% static 'rent/img/2024-02-06.jpg' %}" alt="">
+                <img src="{% static 'rent/img/prop2.jpg' %}" alt="">
+
+                <div class="see-more">
+                    <p>Slide to see more picture  <i class="fa-solid fa-greater-than"></i><i class="fa-solid fa-greater-than"></i> </p>
+                </div>
+                
+            </div>
+            <button class="prev-btn" id="prevBtn">&#10094;</button>
+            <button class="next-btn" id="nextBtn">&#10095;</button>
         </div>
         <div class="small-img">
-            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+            <img src="{% static 'rent/img/2024-02-06 (1).jpg' %}" alt="">
             <img src="{% static 'rent/img/prop.jpg' %}" alt="">
         </div>
     </div>
 
 
 
-    <div class="detail-for-property">
+    <div class="detail-for-property padding">
       <div class="detail-row  row-2">
         <div class="d-1">
             <p>Single Room</p>
@@ -39,12 +51,14 @@
         <div class="d-2">
             <p> Cozy studio unit with private washroom & kitchenette. Modern finishes, ample storage & natural light. Convenient location near amenities. Ideal urban living space. Located at Dome in Accra.</p>
         </div>
-        <div class="d-3">
+        <div class="d-3-container">
             <h4>What this place offers ?</h4>
+           <div class="d-3">
             <li> CCTV Camera</li>
             <li> CCTV Camera</li>
             <li> CCTV Camera</li>
             <li> CCTV Camera</li>
+           </div>
         </div>
 
       </div>
@@ -87,6 +101,39 @@
 
 
 
+
+
+<div class="review-form padding">
+    <h4>Write your review here</h4>
+    <form action="">
+      <div class="stars">
+        <a href=""><i class="fa-solid fa-star"></i> </a>
+        <a href=""><i class="fa-solid fa-star"></i> </a>
+        <a href=""><i class="fa-solid fa-star"></i> </a>
+        <a href=""><i class="fa-solid fa-star"></i> </a>
+        <a href=""><i class="fa-solid fa-star"></i> </a>
+      </div>
+     <div class="form">
+        <textarea name="" id=""></textarea>
+        <button>Submite</button>
+     </div>
+    </form>
+
+    <div class="reviews-comment">
+        <h5>From Tenant who lived there</h5>
+        <div class="comment">
+            <p>This Place is very beautiful</p>
+            <div class="stars-rated">
+                <a href=""><i class="fa-solid fa-star"></i> </a>
+                <a href=""><i class="fa-solid fa-star"></i> </a>
+                <a href=""><i class="fa-solid fa-star"></i> </a>
+            </div>
+            <div class="by-tenant">
+                <p>By: Ohene Asare</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
