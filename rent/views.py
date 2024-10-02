@@ -33,3 +33,6 @@ def login(request):
 
 def propertysale(request):
  return render(request, 'rent/propertysale.html')
+
+def faq(request):
+ return render(request, 'rent/faq.html')

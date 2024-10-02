@@ -17,4 +17,5 @@ urlpatterns = [
     path('tenant', views.tenant, name='tenant'),
     path('signUp', views.signUp, name='signUp'),
     path('login', views.login, name='login'),
+    path('faq', views.faq, name='faq'),
 ]

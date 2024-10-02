@@ -1213,12 +1213,56 @@ object-fit: cover;
 
 .props-detail-c{
     display: flex;
+    gap: 2rem;
     justify-content: space-between;
 }
 
 .props-d-2-container{
     width: 100%;
     max-width: 70%;
+}
+.props-detail-3{
+    width: 100%;
+    max-width: 30%;
+    background-color: var(--whiteColor);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    height: 53vh;
+}
+.props-detail-3 h2{
+    font-size: 1.2rem;
+}
+.props-detail-3 form{
+    width: 100%;
+}
+.props-detail-c form{
+    padding: 5% 0;
+}
+.props-detail-3 input{
+    width: 100%;
+    min-height: 6vh;
+    outline: none;
+    border: solid 1px #0dca95;
+    padding: 10px;
+    margin: 2% 0;
+}
+.props-detail-3 button{
+    cursor: pointer;
+    width: 100%;
+    min-height: 6vh;
+    outline: none;
+   border: none;
+   background-color: var(--green);
+   color: var(--whiteColor);
+}
+.props-detail-3 textarea{
+    margin: 2% 0;
+    width: 100%;
+    min-height: 10vh;
+    outline: none;
+    border: solid 1px #0dca95;
+    padding: 10px;
+    resize: none;
 }
 
 .props-d{
@@ -1464,6 +1508,7 @@ padding-bottom: 3%;
 .client-profile{
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
 }
 
 .client-message{
@@ -1527,6 +1572,7 @@ padding-bottom: 3%;
     border: none;
     outline: none;
     cursor: pointer;
+    color: var(--whiteColor);
 }
 
 
@@ -2231,9 +2277,12 @@ object-fit: cover;
     .props-detail-c{
         flex-direction: column;
     }
-    .props-d-2-container{
+    .props-d-2-container, .props-detail-3{
         max-width: none;
     } 
+    .props-detail-3{
+    min-height: 60vh !important;
+    }
 }
 @media (max-width: 768px) {
     .sign-up h2{
