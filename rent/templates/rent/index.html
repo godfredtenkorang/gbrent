@@ -37,8 +37,69 @@
 
 
 
+<!-- how it works -->
+<div class="how-it-works padding">
+    <div class="heading">
+        <h2>How it works</h2>
+        <p> Follow these 3 steps to book your place
+
+        </p>
+    </div>
+
+    <div class="how-works">
+        <div class="works">
+            <i class="fa-solid fa-location-crosshairs"></i>
+            <h4>01. Search for Location</h4>
+            <p>Start by entering your desired location to find the perfect property in the area you want.</p>
+        </div>
+        <div class="works">
+            <i class="fa-solid fa-house"></i>
+            <h4>02. Select Property Type</h4>
+            <p>Choose from a variety of property types, including houses, apartments, and hostels.</p>
+        </div>
+        <div class="works">
+            <i class="fa-solid fa-receipt"></i>
+            <h4>03. Book Your Property</h4>
+            <p>Once you've found the right property, easily book it online with a few clicks.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- abut us section -->
-<section class="about-us-section padding">
+<!-- <section class="about-us-section padding">
     <div class="about-img">
         <img src="{% static 'rent/img/7.png' %}" alt="">
     </div>
@@ -81,7 +142,7 @@
         </div>
 
     </div>
-</section>
+</section> -->
 
 
 <!-- <section class="service-section-container padding">
@@ -114,202 +175,192 @@
 <section class="product-section-container padding">
     <div class="heading">
         <h2>Featured Properties</h2>
+        <p> Hand-Picked selection of quality places
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </p>
     </div>
     <div class="product-grid">
+
         <div class="product-property">
             <a href="{% url 'propertyDetail' %}">
-            <img src="{% static 'rent/img/2024-02-06.jpg' %}" alt="">
-            <div class="state">
-                <p>For Rent</p>
+                <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+            </a>
+            <div class="f">
+                <p>Featured</p>
             </div>
-            <div class="property-details">
-                <!-- price -->
-                <div class="price">
-                    <p>500 Gh/</p>
-                </div>
-                <!-- propery name -->
+            <div class="price">
+                <p>₵ 500</p>
+            </div>
+            <div class="favourite">
+                <a href=""><i class="fa-regular fa-heart"></i> </a>
+            </div>
+
+
+            <div class="product-details">
                 <div class="name">
-                    <p>A luxury villa in a park</p>
+                    <a href="">
+                        Place Perfect For Nature
+
+
+                    </a>
+
+
+
+                </div>
+                <div class="loca">
+                    <p><i class="fa-solid fa-location-dot"></i>
+                        Accra Sowutuom</p>
+                </div>
+                <div class="fet">
+                    <p><i class="fa-solid fa-bed"></i> 4 Beds</p>
+                    <p><i class="fa-solid fa-bath"></i> 4 Bath</p>
+                    <p><i class="fa-solid fa-ruler-combined"></i> Sqft</p>
                 </div>
 
-                <!-- capacity -->
-                <div class="capacity">
-                    <p>10 Bed rooms</p>
+                <div class="flex">
+                    <div class="date">
+                        <p>Listed on :16 Jan 2023</p>
+                    </div>
+                    <div class="cat">
+                        <p>Apartmnt</p>
+                    </div>
                 </div>
 
-              
             </div>
-           </a>
-          
 
 
-            <div class="prop">
-
-                <div class="location">
-                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
-
-                </div>
 
 
-                <div class="prop-btns">
-                    <!-- add to cart -->
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
 
-                    <!-- add to fav -->
 
-                    <a href=""><i class="fa-solid fa-heart"></i></a>
-
-                    <!-- view more links -->
-                    <a href=""><i class="fa-solid fa-eye"></i></a>
-                </div>
-            </div>
         </div>
+
         <div class="product-property">
             <a href="{% url 'propertyDetail' %}">
-            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
-            <div class="state">
-                <p>For Rent</p>
+                <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+            </a>
+            <div class="f">
+                <p>Featured</p>
             </div>
-            <div class="property-details">
-                <!-- price -->
-                <div class="price">
-                    <p>500 Gh/</p>
-                </div>
-                <!-- propery name -->
+            <div class="price">
+                <p>₵ 500</p>
+            </div>
+            <div class="favourite">
+                <a href=""><i class="fa-regular fa-heart"></i> </a>
+            </div>
+
+
+            <div class="product-details">
                 <div class="name">
-                    <p>A luxury villa in a park</p>
+                    <a href="">
+                        Place Perfect For Nature
+
+
+                    </a>
+
+
+
+                </div>
+                <div class="loca">
+                    <p><i class="fa-solid fa-location-dot"></i>
+                        Accra Sowutuom</p>
+                </div>
+                <div class="fet">
+                    <p><i class="fa-solid fa-bed"></i> 4 Beds</p>
+                    <p><i class="fa-solid fa-bath"></i> 4 Bath</p>
+                    <p><i class="fa-solid fa-ruler-combined"></i> Sqft</p>
                 </div>
 
-                <!-- capacity -->
-                <div class="capacity">
-                    <p>10 Bed rooms</p>
+                <div class="flex">
+                    <div class="date">
+                        <p>Listed on :16 Jan 2023</p>
+                    </div>
+                    <div class="cat">
+                        <p>Apartmnt</p>
+                    </div>
                 </div>
 
-              
             </div>
-           </a>
-          
 
 
-            <div class="prop">
-
-                <div class="location">
-                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
-
-                </div>
 
 
-                <div class="prop-btns">
-                    <!-- add to cart -->
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
 
-                    <!-- add to fav -->
 
-                    <a href=""><i class="fa-solid fa-heart"></i></a>
-
-                    <!-- view more links -->
-                    <a href=""><i class="fa-solid fa-eye"></i></a>
-                </div>
-            </div>
         </div>
+
         <div class="product-property">
             <a href="{% url 'propertyDetail' %}">
-            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
-            <div class="state">
-                <p>For Rent</p>
+                <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+            </a>
+            <div class="f">
+                <p>Featured</p>
             </div>
-            <div class="property-details">
-                <!-- price -->
-                <div class="price">
-                    <p>500 Gh/</p>
-                </div>
-                <!-- propery name -->
+            <div class="price">
+                <p>₵ 500</p>
+            </div>
+            <div class="favourite">
+                <a href=""><i class="fa-regular fa-heart"></i> </a>
+            </div>
+
+
+            <div class="product-details">
                 <div class="name">
-                    <p>A luxury villa in a park</p>
+                    <a href="">
+                        Place Perfect For Nature
+
+
+                    </a>
+
+
+
+                </div>
+                <div class="loca">
+                    <p><i class="fa-solid fa-location-dot"></i>
+                        Accra Sowutuom</p>
+                </div>
+                <div class="fet">
+                    <p><i class="fa-solid fa-bed"></i> 4 Beds</p>
+                    <p><i class="fa-solid fa-bath"></i> 4 Bath</p>
+                    <p><i class="fa-solid fa-ruler-combined"></i> Sqft</p>
                 </div>
 
-                <!-- capacity -->
-                <div class="capacity">
-                    <p>10 Bed rooms</p>
+                <div class="flex">
+                    <div class="date">
+                        <p>Listed on :16 Jan 2023</p>
+                    </div>
+                    <div class="cat">
+                        <p>Apartmnt</p>
+                    </div>
                 </div>
 
-              
             </div>
-           </a>
-          
 
 
-            <div class="prop">
-
-                <div class="location">
-                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
-
-                </div>
 
 
-                <div class="prop-btns">
-                    <!-- add to cart -->
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
 
-                    <!-- add to fav -->
 
-                    <a href=""><i class="fa-solid fa-heart"></i></a>
-
-                    <!-- view more links -->
-                    <a href=""><i class="fa-solid fa-eye"></i></a>
-                </div>
-            </div>
         </div>
-        <div class="product-property">
-            <a href="{% url 'propertyDetail' %}">
-            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
-            <div class="state">
-                <p>For Rent</p>
-            </div>
-            <div class="property-details">
-                <!-- price -->
-                <div class="price">
-                    <p>500 Gh/</p>
-                </div>
-                <!-- propery name -->
-                <div class="name">
-                    <p>A luxury villa in a park</p>
-                </div>
 
-                <!-- capacity -->
-                <div class="capacity">
-                    <p>10 Bed rooms</p>
-                </div>
-
-              
-            </div>
-           </a>
-          
-
-
-            <div class="prop">
-
-                <div class="location">
-                    <p><i class="fa-solid fa-location-dot"></i> Ghana</p>
-
-                </div>
-
-
-                <div class="prop-btns">
-                    <!-- add to cart -->
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-
-                    <!-- add to fav -->
-
-                    <a href=""><i class="fa-solid fa-heart"></i></a>
-
-                    <!-- view more links -->
-                    <a href=""><i class="fa-solid fa-eye"></i></a>
-                </div>
-            </div>
-        </div>
-        
       
+   
+
+
 
 
 
@@ -325,9 +376,10 @@
 
 
     </div>
-   
+
     <div class="view-all">
-        <a href="{% url 'property' %}">View all property <i class="fa-solid fa-greater-than"></i><i class="fa-solid fa-greater-than"></i>
+        <a href="{% url 'property' %}">View all property <i class="fa-solid fa-greater-than"></i><i
+                class="fa-solid fa-greater-than"></i>
         </a>
     </div>
 </section>
@@ -341,25 +393,26 @@
 </section> -->
 
 
- 
+<!-- 
 <div class="redy-container padd">
     <div class="ready">
         <img src="{% static 'rent/img/why.jpg' %}" alt="">
     </div>
     <div class="ready r-pad">
-      <h3>Ready to join our community of tenants? </h3>
-      <p>We are forging a new generation of happy and protected tenants across Africa who enjoy a unique and tailored experience, build their credit identity and thus are financially empowered. </p>
+        <h3>Ready to join our community of tenants? </h3>
+        <p>We are forging a new generation of happy and protected tenants across Africa who enjoy a unique and tailored
+            experience, build their credit identity and thus are financially empowered. </p>
 
-      <a href="">Explore more homes</a>
+        <a href="">Explore more homes</a>
     </div>
- 
-</div>
+
+</div> -->
 
 
 
 
 <!-- what client say -->
-<section class="what-client-say padding">
+<!-- <section class="what-client-say padding">
     <div class="heading">
         <h2>What Client Say</h2>
     </div>
@@ -409,7 +462,7 @@
 
 
 
-</section>
+</section> -->
 
 
 
