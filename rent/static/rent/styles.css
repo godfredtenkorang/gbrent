@@ -1459,6 +1459,7 @@ padding-bottom: 3%;
     border: solid 1px rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 5px;
+    margin-bottom: 1%;
 }
 .client-profile{
     display: flex;
@@ -1474,12 +1475,59 @@ padding-bottom: 3%;
 }
 
 
+.stars{
+   
+    display: flex;
+    gap: 1rem;
+    
+}
 
+.stars i{
+    color: var(--green);
+}
 
+.review-form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+}
+.review-form form{
+    width: 100%;
+    margin-top: 4%;
+}
+.input-container{
+    display: flex;
+    gap: 2rem;
 
+}
 
+.input-container input{
+    width: 100%;
+    min-height: 6vh;
+    outline: none;
+    padding: 10px;
+    margin-bottom: 2%;
+    border: solid 1px #0dca95;
+    
+}
+.review-form textarea{
+    width: 100%;
+    min-height: 15vh;
+    outline: none;
+    padding: 10px;
+    resize: none;
+    margin-bottom: 2%;
+    border: solid 1px #0dca95;
+}
 
-
+.review-form button{
+    width: 100%;
+    min-height: 6vh;
+    background-color: var(--green);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
 
 
 
@@ -1493,12 +1541,7 @@ padding-bottom: 3%;
     border-bottom: solid 1px;
     padding-bottom: 10px;
 }
-.stars{
-    margin-top: 2%;
-    display: flex;
-    gap: 1rem;
-    
-}
+
 .stars a{
     color: #ff5a3c;
 }
@@ -2338,15 +2381,11 @@ display: none;
     .cities{
         grid-template-columns: 1fr;
     }
-    .review-form{
-        max-width: none;
-    }
+   
     .comment p{
         padding: 7% 0;
     }
-    .review-form h4, .review-form h5{
-        border-bottom: none;
-    }
+   
     .help-container{
         flex-direction: column;
     }
@@ -2484,6 +2523,15 @@ height: 30vh;
 .heading{
     text-align: left;
     font-size: 1.3rem;
+}
+.input-container{
+    flex-direction: column;
+}
+.props-name{
+    font-size: 1rem;
+}
+.property-type{
+    width: 100px;
 }
 }
 
