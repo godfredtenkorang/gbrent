@@ -2281,7 +2281,7 @@ object-fit: cover;
         max-width: none;
     } 
     .props-detail-3{
-    min-height: 60vh !important;
+    min-height: 40vh !important;
     }
 }
 @media (max-width: 768px) {
@@ -2380,12 +2380,11 @@ display: none;
      
     }
     .amenities{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
     .props-d .fet{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-     gap: 2rem;
+      flex-direction: column;
+      gap: 1rem;
     }
     .list-search{
        gap: 2rem;
@@ -2577,10 +2576,16 @@ height: 30vh;
     flex-direction: column;
 }
 .props-name{
-    font-size: 1rem;
+    font-size: 0.9rem;
+}
+.props-loc{
+    font-size:12px ;
 }
 .property-type{
     width: 100px;
+}
+.client-profile{
+    flex-direction: column;
 }
 }
 
