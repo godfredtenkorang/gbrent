@@ -1,0 +1,231 @@
+{% extends 'rent/base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .explore-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--whiteColor);
+        margin-bottom: 5%;
+        background-size: cover;
+        width: 100%;
+        height: 40vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+        url("{% static 'rent/img/banner.jpg' %}");
+    }
+
+    .banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--whiteColor);
+    margin-bottom: 5%;
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+    
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(14, 14, 70, 0.9), rgba(14, 14, 70, 0.5)),
+    url("{% static 'rent/img/banner.jpg' %}");
+    
+    /* Add a border with red, yellow, and green colors */
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to right, #fd3358, #0dca95, #fd3358) 5;
+}
+
+</style>
+
+<body class="property-page">
+
+
+    <!-- banner -->
+    <div class="banner-container padding">
+        <h1> List of properties for sale
+        </h1>
+
+    </div>
+
+
+    <div class="list-search ">
+      <div class="list">
+        <!-- <i class="fa-solid fa-list"></i> -->
+        <div class="sort">
+            <p>Sort By</p>
+            <select id="sort-options">
+                <option value="default">Default</option>
+                <option value="name-asc">A-Z</option>
+                <option value="price-asc">Price (Low to High)</option>
+                <option value="price-desc">Price (High to Low)</option>
+            </select>
+        </div>
+       
+    </div> 
+        <div class="search-bar">
+            <form action="">
+                <input type="text" placeholder="search-bar">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </div>
+
+
+
+<!-- product section -->
+
+<div class="product-grid margin">
+   
+    <div class="product-property">
+      <div class="product-c">
+        <a href="{% url 'propertyDetail' %}">
+             <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+        </a>
+      
+        <div class="price"><p>₵ 250</p></div>
+        <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div>
+      </div>
+        <div class="product-details">
+            <div class="name"><a href="">Ocean Breeze Villa</a></div>
+            <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Cape Coast</p></div>
+            <div class="fet">
+                <p><i class="fa-solid fa-bed"></i> 5 Beds</p>
+                <p><i class="fa-solid fa-bath"></i> 3 Baths</p>
+                <p><i class="fa-solid fa-ruler-combined"></i> 4000 Sqft</p>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="product-property">
+      <div class="product-c">
+        <a href="{% url 'propertyDetail' %}">
+            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+        </a>
+      
+        <div class="price"><p>₵ 180</p></div>
+        <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div>
+      </div>
+        <div class="product-details">
+            <div class="name"><a href="">City Lights Apartment</a></div>
+            <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Accra Osu</p></div>
+            <div class="fet">
+                <p><i class="fa-solid fa-bed"></i> 3 Beds</p>
+                <p><i class="fa-solid fa-bath"></i> 2 Baths</p>
+                <p><i class="fa-solid fa-ruler-combined"></i> 2500 Sqft</p>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="product-property">
+      <div class="product-c">
+        <a href="{% url 'propertyDetail' %}">
+            <img src="{% static 'rent/img/banner.jpg' %}" alt="">
+        </a>
+      
+        <div class="price"><p>₵ 320</p></div>
+        <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div>
+      </div>
+        <div class="product-details">
+            <div class="name"><a href="">Sunset Beach House</a></div>
+            <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Takoradi</p></div>
+            <div class="fet">
+                <p><i class="fa-solid fa-bed"></i> 4 Beds</p>
+                <p><i class="fa-solid fa-bath"></i> 3 Baths</p>
+                <p><i class="fa-solid fa-ruler-combined"></i> 3500 Sqft</p>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="product-property">
+      <div class="product-c">
+        <a href="{% url 'propertyDetail' %}">
+            <img src="{% static 'rent/img/banner2.jpg' %}" alt="">
+        </a>
+      
+        <div class="price"><p>₵ 210</p></div>
+        <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div>
+      </div>
+        <div class="product-details">
+            <div class="name"><a href="">Hilltop Serenity</a></div>
+            <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Kumasi</p></div>
+            <div class="fet">
+                <p><i class="fa-solid fa-bed"></i> 3 Beds</p>
+                <p><i class="fa-solid fa-bath"></i> 2 Baths</p>
+                <p><i class="fa-solid fa-ruler-combined"></i> 2800 Sqft</p>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="product-property">
+      <div class="product-c">
+        <a href="{% url 'propertyDetail' %}">
+            <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+        </a>
+      
+        <div class="price"><p>₵ 400</p></div>
+        <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div>
+      </div>
+        <div class="product-details">
+            <div class="name"><a href="">Green Valley Estate</a></div>
+            <div class="loca"><p><i class="fa-solid fa-location-dot"></i> East Legon</p></div>
+            <div class="fet">
+                <p><i class="fa-solid fa-bed"></i> 6 Beds</p>
+                <p><i class="fa-solid fa-bath"></i> 5 Baths</p>
+                <p><i class="fa-solid fa-ruler-combined"></i> 5000 Sqft</p>
+            </div>
+        </div>
+    </div>
+ 
+    <div class="product-property">
+      <div class="product-c">
+        <a href="{% url 'propertyDetail' %}">
+            <img src="{% static 'rent/img/prop2.jpg' %}" alt="">
+        </a>
+      
+        <div class="price"><p>₵ 150</p></div>
+        <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div>
+      </div>
+        <div class="product-details">
+            <div class="name"><a href="">Palm Grove Bungalow</a></div>
+            <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Tema</p></div>
+            <div class="fet">
+                <p><i class="fa-solid fa-bed"></i> 2 Beds</p>
+                <p><i class="fa-solid fa-bath"></i> 1 Bath</p>
+                <p><i class="fa-solid fa-ruler-combined"></i> 1500 Sqft</p>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+
+    
+</section>
+
+
+
+
+    <!-- 
+
+<section class="explore-section padding">
+    <p>Could'nt find what you are looking for? </p>
+    <a href=>Send a request</a>
+
+</section> -->
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
