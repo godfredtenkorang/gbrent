@@ -1,6 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,24 +16,21 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
 
 </head>
+
 <body>
 
     <!-- header -->
-     <header>
+    <header>
         <!-- first header -->
-         <div class="first-header-container">
+        <div class="first-header-container">
             <div class="first-header-row">
                 <a href=""><i class="fa-solid fa-envelope"></i> infogbrent@gmail.com</a>
                 <a href=""><i class="fa-solid fa-phone"></i> 0558156844</a>
@@ -44,39 +42,39 @@
                 <a href="https://www.linkedin.com/in/benjamin-ohene-asare/"> <i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://wa.link/8gw4oo"> <i class="fa-brands fa-whatsapp"></i></a>
             </div>
-         </div>
+        </div>
 
-         <!-- second-header -->
-          <div class="second-header-container">
+        <!-- second-header -->
+        <div class="second-header-container">
             <nav class="nav-links">
                 <div class="logo">
-                    
-                    <a href="{% url 'index' %}"><i class="fa-solid fa-house"></i>  GB<span>RENT </span></a>
+
+                    <a href="{% url 'index' %}"><i class="fa-solid fa-house"></i> GB<span>RENT </span></a>
                 </div>
                 <ul class="menu-links ">
                     <li><a href="{% url 'index' %}">Home</a></li>
 
-                    <li class="dropdown">Poperty        <i class="fa-solid fa-caret-down"></i> 
 
-
+                    <li class="dropdown">Propert For Rent <i class="fa-solid fa-caret-down"></i>
                         <!-- propert-category -->
-                      <ul class="category">
-   
-    <li><a href="{% url 'property' %}">House for Rent</a></li>
-    <li><a href="{% url 'property' %}">House for Sale</a></li>
-    <li><a href="{% url 'property' %}">Car for Rent</a></li>
-    <li><a href="{% url 'property' %}">Car for Sale</a></li>
-    <li><a href="{% url 'property' %}">Lands for Sale</a></li>
-    <li><a href="{% url 'property' %}">Hostel for Rent</a></li>
-   
-</ul>
+                        <ul class="category">
 
-                    
-                    
-                    
-                    
-                    
-                    
+                            <li><a href="">Hostel</a></li>
+                            <li><a href="{% url 'propertyrent' %}">House for rent</a></li>
+
+
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">Propert For Sale <i class="fa-solid fa-caret-down"></i>
+                        <!-- propert-category -->
+                        <ul class="category">
+
+                            <li><a href="{% url 'propertysale' %}">House for Sale</a></li>
+
+
+
+                        </ul>
                     </li>
 
 
@@ -84,17 +82,18 @@
 
 
 
+                    <li><a href="">Land for sale</a></li>
                     <li><a href="{% url 'about' %}">About</a></li>
-      
-                   
+
+
                 </ul>
                 <div class="menu-icon">
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </nav>
 
-          </div>
-     </header>
+        </div>
+    </header>
 
 
 
@@ -119,7 +118,7 @@
 
 
 
-<!-- <div class="navigation-btns">
+    <!-- <div class="navigation-btns">
     <div class="nav">
       <a href="">   <i class="fa-solid fa-house"></i> <br> <span> Home </span> </a>
     </div>
@@ -141,46 +140,47 @@
     <footer>
         <div class="footer padding">
             <div class="footer-col">
-                <p> Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.</p>
+                <p> Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the
+                    printing.</p>
                 <p>Ghana</p>
                 <a href=""><i class="fa-solid fa-envelope"></i> infogbrent@gmail.com</a> <br>
                 <a href=""><i class="fa-solid fa-phone"></i> 0558156844</a> <br>
-              <div class="socials">
-                <a href=""><i class="fa-brands fa-facebook"></i> </a> 
-                <a href=""><i class="fa-brands fa-instagram"></i> </a> 
-                <a href=""><i class="fa-brands fa-tiktok"></i> </a> 
-              </div>
+                <div class="socials">
+                    <a href=""><i class="fa-brands fa-facebook"></i> </a>
+                    <a href=""><i class="fa-brands fa-instagram"></i> </a>
+                    <a href=""><i class="fa-brands fa-tiktok"></i> </a>
+                </div>
             </div>
             <div class="footer-col">
-               <h5>Company</h5>
-               <li><a href="">About</a></li>
-               <li><a href="">Blog</a></li>
-               <li><a href="">All Product</a></li>
-               <li><a href="">FAQ</a></li>
-               <li><a href="">Contact us</a></li>
-        
-            </div>
-            <div class="footer-col">
-               <h5>Services</h5>
-              
-               <li><a href="">Wish list</a></li>
-               <li><a href="{% url 'login' %}">Login</a></li>
-               <li><a href="">My account</a></li>
-               <li><a href="">Terms & conditions</a></li>
-               <li><a href="{% url 'tenant' %}">Become a tenant</a></li>
-             
-            </div>
-            
-            <div class="footer-col">
-               <h5>Newsletter</h5>
-               <p>Subscribe to our weekly Newsletter and receive updates via email. </p>
+                <h5>Company</h5>
+                <li><a href="">About</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">All Product</a></li>
+                <li><a href="{% url 'faq' %}">FAQ</a></li>
+                <li><a href="">Contact us</a></li>
 
-               <form action="">
-                <input type="text" placeholder="Email"> <button>Subscribe</button>
-               </form>
-              
             </div>
-            
+            <div class="footer-col">
+                <h5>Services</h5>
+
+                <li><a href="">Wish list</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="">My account</a></li>
+                <li><a href="">Terms & conditions</a></li>
+                <li><a href="{% url 'tenant' %}">Become a tenant</a></li>
+
+            </div>
+
+            <div class="footer-col">
+                <h5>Newsletter</h5>
+                <p>Subscribe to our weekly Newsletter and receive updates via email. </p>
+
+                <form action="">
+                    <input type="text" placeholder="Email"> <button>Subscribe</button>
+                </form>
+
+            </div>
+
         </div>
 
         <div class="copy-right">
@@ -196,17 +196,17 @@
         const slider = document.querySelector('.slider');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
-        
+
         let isDragging = false;
         let startPos = 0;
         let currentTranslate = 0;
         let prevTranslate = 0;
         let animationID;
         let currentIndexs = 0;
-        
+
         const images = document.querySelectorAll('.slider img');
         const totalImages = images.length;
-        
+
         prevBtn.addEventListener('click', () => {
             if (currentIndexs > 0) {
                 currentIndexs--;
@@ -215,7 +215,7 @@
             }
             updateSliderPosition();
         });
-        
+
         nextBtn.addEventListener('click', () => {
             if (currentIndexs < totalImages - 1) {
                 currentIndexs++;
@@ -224,166 +224,166 @@
             }
             updateSliderPosition();
         });
-        
+
         slider.addEventListener('mousedown', startDragging);
         slider.addEventListener('touchstart', startDragging);
         slider.addEventListener('mouseup', stopDragging);
         slider.addEventListener('touchend', stopDragging);
         slider.addEventListener('mousemove', drag);
         slider.addEventListener('touchmove', drag);
-        
+
         function startDragging(e) {
             isDragging = true;
             startPos = getPositionX(e);
             animationID = requestAnimationFrame(animation);
             slider.style.cursor = 'grabbing';
         }
-        
+
         function stopDragging() {
             isDragging = false;
             cancelAnimationFrame(animationID);
             const movedBy = currentTranslate - prevTranslate;
-        
+
             if (movedBy < -100) {
                 currentIndexs = (currentIndexs + 1) % totalImages; // Loop forward
             }
             if (movedBy > 100) {
                 currentIndexs = (currentIndexs - 1 + totalImages) % totalImages; // Loop backward
             }
-        
+
             updateSliderPosition();
             slider.style.cursor = 'grab';
         }
-        
+
         function drag(e) {
             if (isDragging) {
                 const currentPosition = getPositionX(e);
                 currentTranslate = prevTranslate + currentPosition - startPos;
             }
         }
-        
+
         function getPositionX(e) {
             return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
         }
-        
+
         function animation() {
             setSliderPosition();
             if (isDragging) requestAnimationFrame(animation);
         }
-        
+
         function setSliderPosition() {
             slider.style.transform = `translateX(${currentTranslate}px)`;
         }
-        
+
         function updateSliderPosition() {
             currentTranslate = currentIndexs * -slider.offsetWidth;
             prevTranslate = currentTranslate;
             setSliderPosition();
         }
-        </script>
-        
-
-<script>
-    const secondheadercontainer = document.querySelector(".second-header-container")
-
-window.addEventListener("scroll",()=>{
-    if(window.scrollY > 20){
-        secondheadercontainer.classList.add("sticky")
-    }
-    else{
-        secondheadercontainer.classList.remove("sticky")
-    }
-})
-
-</script>
-<script>
-    const navigavtionBtn = document.querySelector(".navigation-btns")
-
-    window.addEventListener("scroll",()=>{
-        const scrollFromTop = window.scrollY
-        const windowHeight = window.innerHeight
-        const documentHeight = document.body.offsetHeight
+    </script>
 
 
-        if(scrollFromTop > 50 && (windowHeight + scrollFromTop) < documentHeight){
-            navigavtionBtn.classList.add("stickyNav")
-        } else if((windowHeight + scrollFromTop) >= documentHeight){
-            navigavtionBtn.classList.remove("stickyNav")
-        }else{
-            navigavtionBtn.classList.remove("stickyNav") 
+    <script>
+        const secondheadercontainer = document.querySelector(".second-header-container")
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 20) {
+                secondheadercontainer.classList.add("sticky")
+            }
+            else {
+                secondheadercontainer.classList.remove("sticky")
+            }
+        })
+
+    </script>
+    <script>
+        const navigavtionBtn = document.querySelector(".navigation-btns")
+
+        window.addEventListener("scroll", () => {
+            const scrollFromTop = window.scrollY
+            const windowHeight = window.innerHeight
+            const documentHeight = document.body.offsetHeight
+
+
+            if (scrollFromTop > 50 && (windowHeight + scrollFromTop) < documentHeight) {
+                navigavtionBtn.classList.add("stickyNav")
+            } else if ((windowHeight + scrollFromTop) >= documentHeight) {
+                navigavtionBtn.classList.remove("stickyNav")
+            } else {
+                navigavtionBtn.classList.remove("stickyNav")
+            }
+
+        })
+
+
+
+
+
+    </script>
+
+
+    <script>
+
+        const testimonials = document.querySelectorAll('.client-say');
+        let currentIndex = 0;
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.classList.toggle('active', i === index);
+            });
         }
-        
-    })
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % testimonials.length; // Cycle back to the first
+            showTestimonial(currentIndex);
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length; // Cycle back to the last
+            showTestimonial(currentIndex);
+        });
+
+        // Initialize the first testimonial
+        showTestimonial(currentIndex);
 
 
+    </script>
+
+    <script>
+        const categoty = document.querySelector(".category")
+        const dropdown = document.querySelector(".dropdown")
+        dropdown.addEventListener("click", () => {
+            categoty.classList.toggle('show-cat')
+        })
 
 
-
-</script>
-
-
-<script>
-   
-   const testimonials = document.querySelectorAll('.client-say');
-let currentIndex = 0;
-
-function showTestimonial(index) {
-    testimonials.forEach((testimonial, i) => {
-        testimonial.classList.toggle('active', i === index);
-    });
-}
-
-document.getElementById('nextBtn').addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % testimonials.length; // Cycle back to the first
-    showTestimonial(currentIndex);
-});
-
-document.getElementById('prevBtn').addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length; // Cycle back to the last
-    showTestimonial(currentIndex);
-});
-
-// Initialize the first testimonial
-showTestimonial(currentIndex);
+    </script>
 
 
-</script>
+    <script>
+        const falist = document.querySelector(".fa-list");
+        const productgrid = document.querySelector(".product-grid");
 
-<script>
-   const categoty = document.querySelector(".category") 
-   const dropdown= document.querySelector(".dropdown") 
-   dropdown.addEventListener("click",()=>{
-    categoty.classList.toggle('show-cat')
-   })
+        // Check if there's a saved state in localStorage when the page loads
+        window.addEventListener("load", () => {
+            const savedView = localStorage.getItem("productView");
+            if (savedView === "list") {
+                productgrid.classList.add("gridone");
+            }
+        });
 
+        // Toggle the class and save the state in localStorage when the button is clicked
+        falist.addEventListener("click", () => {
+            productgrid.classList.toggle("gridone");
 
-</script>
-
-
-<script>
-    const falist = document.querySelector(".fa-list");
-    const productgrid = document.querySelector(".product-grid");
-
-    // Check if there's a saved state in localStorage when the page loads
-    window.addEventListener("load", () => {
-        const savedView = localStorage.getItem("productView");
-        if (savedView === "list") {
-            productgrid.classList.add("gridone");
-        }
-    });
-
-    // Toggle the class and save the state in localStorage when the button is clicked
-    falist.addEventListener("click", () => {
-        productgrid.classList.toggle("gridone");
-
-        // Save the state in localStorage
-        if (productgrid.classList.contains("gridone")) {
-            localStorage.setItem("productView", "list");
-        } else {
-            localStorage.setItem("productView", "grid");
-        }
-    });
-</script>
+            // Save the state in localStorage
+            if (productgrid.classList.contains("gridone")) {
+                localStorage.setItem("productView", "list");
+            } else {
+                localStorage.setItem("productView", "grid");
+            }
+        });
+    </script>
 
 
 
@@ -393,8 +393,91 @@ showTestimonial(currentIndex);
 
 
 
+    <script>
+        document.querySelectorAll('.question').forEach((question) => {
+            question.addEventListener('click', () => {
+                // Toggle the active state for caret rotation
+                question.classList.toggle('active');
+
+                // Get the answer container
+                const answer = question.nextElementSibling;
+
+                // Toggle display of the answer
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                } else {
+                    answer.style.display = "block";
+                }
+            });
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the previously selected sort option from localStorage
+            const savedSortOption = localStorage.getItem('sortOption');
+            const sortOptions = document.getElementById('sort-options');
+
+            if (savedSortOption) {
+                // Set the dropdown to the saved sort option
+                sortOptions.value = savedSortOption;
+                // Trigger sorting immediately if there was a saved option
+                sortProducts(savedSortOption);
+            }
+
+            sortOptions.addEventListener('change', function () {
+                const option = this.value; // Get selected option
+                // Save the selected option to localStorage
+                localStorage.setItem('sortOption', option);
+                // Sort products based on the selected option
+                sortProducts(option);
+            });
+
+            function sortProducts(option) {
+                const productGrid = document.querySelector('.product-grid');
+                const products = Array.from(document.querySelectorAll('.product-property'));
+
+                let sortedProducts;
+
+                if (option === 'name-asc') {
+                    // Sort products alphabetically by name
+                    sortedProducts = products.sort((a, b) => {
+                        const nameA = a.querySelector('.name a').textContent.trim().toLowerCase();
+                        const nameB = b.querySelector('.name a').textContent.trim().toLowerCase();
+                        return nameA.localeCompare(nameB);
+                    });
+                } else if (option === 'price-asc') {
+                    // Sort products by price ascending
+                    sortedProducts = products.sort((a, b) => {
+                        const priceA = parseFloat(a.querySelector('.price p').textContent.replace(/[₵,]/g, '').trim());
+                        const priceB = parseFloat(b.querySelector('.price p').textContent.replace(/[₵,]/g, '').trim());
+                        return priceA - priceB;
+                    });
+                } else if (option === 'price-desc') {
+                    // Sort products by price descending
+                    sortedProducts = products.sort((a, b) => {
+                        const priceA = parseFloat(a.querySelector('.price p').textContent.replace(/[₵,]/g, '').trim());
+                        const priceB = parseFloat(b.querySelector('.price p').textContent.replace(/[₵,]/g, '').trim());
+                        return priceB - priceA;
+                    });
+                } else {
+                    // Default: do nothing (or reset to the original order)
+                    sortedProducts = products;
+                }
+
+                // Clear the current product grid
+                productGrid.innerHTML = '';
+
+                // Append the sorted products
+                sortedProducts.forEach(product => {
+                    productGrid.appendChild(product);
+                });
+            }
+        });
 
 
-
+    </script>
 </body>
+
 </html>

@@ -3,20 +3,26 @@
 
 {% block content %}
 <style>
-     .banner-container{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: var(--whiteColor);
-        margin-bottom: 5%;
-        background-size: cover;
-        width: 100%;
-        height: 40vh;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-        url("{% static 'rent/img/banner.jpg' %}");
-    }
+    .banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--whiteColor);
+    margin-bottom: 5%;
+    background-size: cover;
+    width: 100%;
+    height: 25vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(14, 14, 70, 0.9), rgba(14, 14, 70, 0.8)),
+    url("{% static 'rent/img/banner.jpg' %}");
+    
+    /* Add a border with red, yellow, and green colors */
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to right, #fd3358, #0dca95 , #fd3358) 9;
+
+}
 </style>
 
 <body class="property-page">

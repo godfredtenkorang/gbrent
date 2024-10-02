@@ -3,19 +3,77 @@
 
 {% block content %}
 
-
-<body class="property-page">
+<style>
+    .banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--whiteColor);
+    margin-bottom: 5%;
+    background-size: cover;
+    width: 100%;
+    height: 25vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(14, 14, 70, 0.9), rgba(14, 14, 70, 0.8)),
+    url("{% static 'rent/img/banner.jpg' %}");
     
+    /* Add a border with red, yellow, and green colors */
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to right, #fd3358, #0dca95 , #fd3358) 9;
 
-<!-- banner -->
-<!-- <div class="banner-container padding">
-    <h1> Property Detail
-    </h1>
+}
+</style>
 
-</div> -->
+<body class="property-page props-back">
 
 
-<div class="property-detail-container ">
+    <!-- banner -->
+    <div class="banner-container padding">
+        <h1> Property Detail
+        </h1>
+
+    </div>
+
+
+
+
+    <div class="props-detail margin">
+
+        <div class="props-row">
+
+            <div class="property-type">
+                <p>Apartment</p>
+            </div>
+            <div class="props-name">
+                <p> Modern Apartment in the City CenterImage
+                </p>
+            </div>
+            <div class="props-loc">
+                <p><i class="fas fa-map-pin"></i>
+                    318-330 S Oakley Blvd, Chicago, IL 60612, USA
+
+                </p>
+            </div>
+
+        </div>
+
+        <div class="props-row">
+
+            <div class="props-price">
+                <p>4,000 </p>
+            </div>
+
+            <div class="wish-list">
+                <a href=""><i class="fa-regular fa-heart"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+
+
     <div class="propert-images">
         <div class="big-img">
             <div class="slider">
@@ -25,9 +83,10 @@
                 <img src="{% static 'rent/img/prop2.jpg' %}" alt="">
 
                 <div class="see-more">
-                    <p>Slide to see more picture  <i class="fa-solid fa-greater-than"></i><i class="fa-solid fa-greater-than"></i> </p>
+                    <p>Slide to see more picture <i class="fa-solid fa-greater-than"></i><i
+                            class="fa-solid fa-greater-than"></i> </p>
                 </div>
-                
+
             </div>
             <button class="prev-btn" id="prevBtn">&#10094;</button>
             <button class="next-btn" id="nextBtn">&#10095;</button>
@@ -39,105 +98,151 @@
     </div>
 
 
+    <div class="props-detail-c padding">
+        <div class="props-d-2-container">
+            <div class="props-d">
+                <h3>Overview</h3>
+                <div class="fet">
+                    <p><i class="fa-solid fa-bed"></i> 5 Beds</p>
+                    <p><i class="fa-solid fa-bath"></i> 3 Baths</p>
+                    <p><i class="fa-solid fa-ruler-combined"></i> 4000 Sqft</p>
+                    <p><i class="fa-solid fa-calendar"></i> Year Built: 2020</p>
+                    <p><i class="fa-solid fa-warehouse"></i> 2 Car Garage</p>
+                </div>
 
-    <div class="detail-for-property padding">
-      <div class="detail-row  row-2">
-        <div class="d-1">
-            <p>Single Room</p>
-            <p>1 Bathroom(s)
+            </div>
+            <div class="props-d">
+                <h3>Description</h3>
+                <p> Good road frontage on a paved county road with utilities make it an amazing setting for yourdream
+                    country getaway! If you like views, you must see this property!,
 
-            </p>
+
+                    This property is mostly wooded and sits high on a hilltop overlooking the Mohawk River
+                    Valley.Located right in the heart of Upstate NYs Amish farm Country, this land is certified organic
+                    makingit extremely rare! Good road frontage on a paved county road with utilities make it an
+                    amazingsetting for your dream country getaway! If you like views, you must see this property!This
+                    propertyis mostly wooded and sits high on a hilltop overlooking the Mohawk River Valley. Located
+                    right inthe heart of Upstate NYs Amish farm Country, this land is certified organic making it
+                    extremelyrare! Good road frontage on a paved county road with utilities make it an amazing setting
+                    for yourdream country getaway! If you like views, you must see this property!</p>
+
+            </div>
+            <div class="props-d">
+                <h3>Amenities</h3>
+                <div class="amenities">
+                    <p><i class="fa-solid fa-wifi"></i> Free Wi-Fi</p>
+                    <p><i class="fa-solid fa-swimmer"></i> Swimming Pool</p>
+                    <p><i class="fa-solid fa-dumbbell"></i> Fitness Center</p>
+                    <p><i class="fa-solid fa-utensils"></i> Restaurant</p>
+                    <p><i class="fa-solid fa-parking"></i> Free Parking</p>
+                    <p><i class="fa-solid fa-paw"></i> Pet Friendly</p>
+                    <p><i class="fa-solid fa-spa"></i> Spa Services</p>
+                    <p><i class="fa-solid fa-tv"></i> Cable TV</p>
+                    <p><i class="fa-solid fa-snowflake"></i> Air Conditioning</p>
+                </div>
+
+
+            </div>
+            <div class="props-d map">
+                <h3>Map</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.5972873975784!2d-0.2766762252188625!3d5.626313632939053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf98c25ce18e1d%3A0xa488794859304f7!2sPentecost%20University!5e0!3m2!1sen!2sgh!4v1727887810745!5m2!1sen!2sgh"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+
+
+            <div class="props-d ">
+                <h3>Review</h3>
+
+                <!-- list of reviews -->
+                <div class="client-reviews">
+                    <div class="client-profile">
+                        <div class="c-row">
+                            <p class="useremail">benjaminoheneasare</p>
+                            <p class="dateposted">22nd october</p>
+                        </div>
+                        <div class="c-row stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="client-message">
+                        <p> It was popularised in the 1960s with the release of Letraset sheets containing LoremIpsum
+                            passages, and more recently with desktop publishing software like Aldus PageMakerincluding
+                            versions of Lorem Ipsum.It was popularised in the 1960s</p>
+                    </div>
+                </div>
+                <div class="client-reviews">
+                    <div class="client-profile">
+                        <div class="c-row">
+                            <p class="useremail">benjaminoheneasare</p>
+                            <p class="dateposted">22nd october</p>
+                        </div>
+                        <div class="c-row stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="client-message">
+                        <p> It was popularised in the 1960s with the release of Letraset sheets containing LoremIpsum
+                            passages, and more recently with desktop publishing software like Aldus PageMakerincluding
+                            versions of Lorem Ipsum.It was popularised in the 1960s</p>
+                    </div>
+                </div>
+
+                <div class="review-form">
+                    <h4>Property Reviews
+                    </h4>
+
+                    <form action="">
+                        <div class="input-container">
+                            <input type="text" placeholder="Name" required>
+                            <input type="email" placeholder="email" required>
+                        </div>
+                        <textarea name="" id="" placeholder="message" required></textarea>
+                        <button>submit review</button>
+                    </form>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </div>
-        <div class="d-2">
-            <p> Cozy studio unit with private washroom & kitchenette. Modern finishes, ample storage & natural light. Convenient location near amenities. Ideal urban living space. Located at Dome in Accra.</p>
+        <div class="props-detail-3">
+            <h2>Interested in this propperty ? book now</h2>
+            <form action="">
+                <input type="text" name="" id="" placeholder="Your name" required>
+                <input type="email" name="" id="" placeholder="Email" required>
+                <input type="number" name="" id="" placeholder="phone number">
+              <textarea name="" id="" placeholder="are you interested?" required></textarea>
+              <button>Boook</button>
+            </form>
         </div>
-        <div class="d-3-container">
-            <h4>What this place offers ?</h4>
-           <div class="d-3">
-            <li> CCTV Camera</li>
-            <li> CCTV Camera</li>
-            <li> CCTV Camera</li>
-            <li> CCTV Camera</li>
-           </div>
-        </div>
-
-      </div>
-
-
-      <div class="detail-row row-3">
-        <div class="d-price">
-            <h4>500 Gh  <br> <span>per month </span>  </h4>
-        </div>
-           <div class="availability">
-            <p>Available</p>
-           </div>
-        <p>Until this property is vacant, it is unavailable for viewings. Please join the waitlist if you're still interested in moving into this property when the current tenant moves out. </p>
-
-        <div class="wishlist">
-        <a href="">
-            <button>Join wish</button>
-        </a>
-        </div>
-
-        <div class="report">
-            <a href="">Report a property</a>
-        </div>
-
-      </div>
     </div>
 
 
 
 
 
-<div class="map">
-    <h4>Where you will be </h4>
-    <p>LavisionDyan Beauty&Spa Salon, Accra, Ghana, Greater Accra
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.5972873975784!2d-0.2766762252188625!3d5.626313632939053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf98c25ce18e1d%3A0xa488794859304f7!2sPentecost%20University!5e0!3m2!1sen!2sus!4v1727450677850!5m2!1sen!2sus"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </p>
-</div>
 
 
-
-
-
-
-
-<div class="review-form padding">
-    <h4>Write your review here</h4>
-    <form action="">
-      <div class="stars">
-        <a href=""><i class="fa-solid fa-star"></i> </a>
-        <a href=""><i class="fa-solid fa-star"></i> </a>
-        <a href=""><i class="fa-solid fa-star"></i> </a>
-        <a href=""><i class="fa-solid fa-star"></i> </a>
-        <a href=""><i class="fa-solid fa-star"></i> </a>
-      </div>
-     <div class="form">
-        <textarea name="" id=""></textarea>
-        <button>Submite</button>
-     </div>
-    </form>
-
-    <div class="reviews-comment">
-        <h5>From Tenant who lived there</h5>
-        <div class="comment">
-            <p>This Place is very beautiful</p>
-            <div class="stars-rated">
-                <a href=""><i class="fa-solid fa-star"></i> </a>
-                <a href=""><i class="fa-solid fa-star"></i> </a>
-                <a href=""><i class="fa-solid fa-star"></i> </a>
-            </div>
-            <div class="by-tenant">
-                <p>By: Ohene Asare</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-</div>
 
 
 
