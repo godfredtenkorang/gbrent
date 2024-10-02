@@ -5,7 +5,8 @@
     --whiteColor: #fff;
     --blackColor: #000000;
     --blueColor:
-    #1e1d85
+    #0e0e46
+
     ;
     --lightBlue: #6c60fe;
     --green:#0dca95 ;
@@ -459,7 +460,7 @@ header a{
 
 /*  product-section-container*/
 .product-section-container{
-
+padding-top: 5%;
     background-color: #f7f6fe;
     
 }
@@ -586,7 +587,7 @@ a .name{
     padding: 15px 35px;
     color: var(--whiteColor);
 }
-.view-all .fa-greater-than, .see-more .fa-greater-than, .dash-heading .fa-greater-than, .help-col .fa-greater-than{
+.view-all .fa-greater-than, .see-more .fa-greater-than, .dash-heading .fa-greater-than, .help-col .fa-greater-than, .city-text .fa-greater-than{
     font-size: 11px;
     animation: keep 0.9s infinite;
    
@@ -622,6 +623,64 @@ a .name{
 
 
 
+/* cities-with-listin */
+.cities-with-listin{
+    padding-top: 5%;
+}
+.cities{
+    margin: 2% 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+.city{
+    width: 100%;
+    max-width: 100%;
+    height: 45vh;
+    position: relative;
+}
+.city img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.city-text{
+    position: absolute;
+    top: 0;
+    height: 45vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+.city-text p{
+    position: absolute;
+    bottom: 20px;
+    color: var(--whiteColor);
+    left: 10px;
+    font-size: 1.4rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* explore-section */
 
 .explore-section p{
@@ -646,7 +705,7 @@ a .name{
 
 .client-say-container{
 
-    padding: 3% 0;
+    padding: 2% 0;
     display: flex;
  width: 100%;
     gap: 2rem;
@@ -745,6 +804,83 @@ a .name{
 .client-detail{
     padding: 5px 0;
 }
+
+
+/*  freeq-question */
+.freeq-question {
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    gap: 2rem;
+}.faq-q h2{
+    font-size: 2rem;
+    color: var(--blueColor);
+}
+
+.faq-q{
+    width: 100%;
+    max-width: 60%;
+    
+}
+.faq-img{
+    width: 100%;
+    max-width: 40%;
+    
+}
+.question{
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+   
+    min-height: 5vh;
+    align-items: center;
+    padding: 10px;
+}
+.question-container{
+    margin: 3% 0;
+    width: 100%; 
+    min-height: 5vh;
+    align-items: center;
+    background-color: var(--whiteColor);
+    border: solid 1px #000000;
+}
+.answer{
+    padding: 10px;
+}
+.question i{
+    cursor: pointer;
+}
+.faq-img img{
+    width: 100%;
+    height: 87vh;
+    object-fit: cover;
+}
+.answer {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.question i {
+    transition: transform 0.3s ease;
+}
+
+.question.active i {
+    transform: rotate(180deg); 
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1728,8 +1864,8 @@ object-fit: cover;
     display: flex;
     align-items: center;
     gap: 2rem;
-    background-color:#f3f5ff;
-    margin-bottom: 5%;
+ 
+    margin: 5% 0;
 }
 .ready{
     width: 100%;
@@ -1985,6 +2121,9 @@ display: none;
     .footer{
         grid-template-columns: 1fr 1fr;
     }
+    .cities{
+        grid-template-columns: 1fr;
+    }
     .review-form{
         max-width: none;
     }
@@ -2024,6 +2163,16 @@ display: none;
     }
     .product-property img{
         height: auto;
+    }
+    .freeq-question{
+        flex-direction: column;
+    }
+    .faq-img, .faq-q{
+        max-width: none;
+    }
+    .faq-img{
+        display: none;
+      
     }
    
     .prop {

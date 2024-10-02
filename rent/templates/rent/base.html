@@ -393,7 +393,25 @@ showTestimonial(currentIndex);
 
 
 
+<script>
+    document.querySelectorAll('.question').forEach((question) => {
+    question.addEventListener('click', () => {
+        // Toggle the active state for caret rotation
+        question.classList.toggle('active');
+        
+        // Get the answer container
+        const answer = question.nextElementSibling;
+        
+        // Toggle display of the answer
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
+        }
+    });
+});
 
+</script>
 
 
 </body>
