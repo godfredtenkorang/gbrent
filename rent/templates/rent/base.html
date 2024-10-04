@@ -55,14 +55,14 @@
                     <li><a href="{% url 'index' %}">Home</a></li>
 
 
-                    <li class="dropdown">Listing <i class="fa-solid fa-caret-down"></i>
+                    <li class="dropdown">Categories <i class="fa-solid fa-caret-down"></i>
                         <!-- propert-category -->
                         <ul class="category">
 
-                            <li><a href="">Hostel</a></li>
+                            <li><a href="{% url 'hostel' %}">Hostel</a></li>
                             <li><a href="{% url 'propertyrent' %}">House for rent</a></li>
                             <li><a href="{% url 'propertysale' %}">House for Sale</a></li>
-                            <li><a href="">Land for sale</a></li>
+                            <li><a href="{% url 'land' %}">Land for sale</a></li>
 
 
 
@@ -84,12 +84,27 @@
 
 
 
-                 
+
                     <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <div class="account">
+                        <div class="user-icon">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </div>
+                        <div class="acount-links">
+                            <li><a href="{% url 'signUp' %}">Signup</a></li>
+                            <li><a href="{% url 'login' %}">Login</a></li>
+                            <li><a href="">Wishlist</a></li>
+                        </div>
+                    </div>
 
 
+                     <div class="close-nav click-nav">
+                        <i class="fa-solid fa-xmark"></i>
+                     </div>
                 </ul>
-                <div class="menu-icon">
+                <div class="menu-icon click-nav">
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </nav>
@@ -157,7 +172,7 @@
                 <h5>Company</h5>
                 <li><a href="">About</a></li>
                 <li><a href="">Blog</a></li>
-                <li><a href="">All Product</a></li>
+              
                 <li><a href="{% url 'faq' %}">FAQ</a></li>
                 <li><a href="">Contact us</a></li>
 
@@ -167,7 +182,7 @@
 
                 <li><a href="">Wish list</a></li>
                 <li><a href="{% url 'login' %}">Login</a></li>
-                <li><a href="">My account</a></li>
+     
                 <li><a href="">Terms & conditions</a></li>
                 <li><a href="{% url 'tenant' %}">Become a tenant</a></li>
 
@@ -480,6 +495,34 @@
 
 
     </script>
+
+
+
+<script>
+ const acountlinks  = document.querySelector(".acount-links")
+ const usericon  = document.querySelector(".user-icon")
+ usericon.addEventListener("click",()=>{
+    acountlinks.classList.toggle("showAccountLinks")
+ })
+
+
+
+</script>
+
+
+<script>
+    const clicknav = document.querySelectorAll(".click-nav")
+    const menulinks  = document.querySelector(".menu-links")
+
+clicknav.forEach((clickNav)=>{
+    
+    clickNav.addEventListener("click",()=>{
+        menulinks.classList.toggle("show-nav")
+    })
+})
+</script>
+
+
 </body>
 
 </html>

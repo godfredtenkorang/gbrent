@@ -36,3 +36,18 @@ def propertysale(request):
 
 def faq(request):
  return render(request, 'rent/faq.html')
+
+def hostelDetail(request):
+ return render(request, 'rent/hostelDetail.html')
+
+def landDetail(request):
+ return render(request, 'rent/landDetail.html')
+
+def hostel(request):
+ return render(request, 'rent/hostel.html')
+
+def land(request):
+ return render(request, 'rent/land.html')
+
+def contact(request):
+ return render(request, 'rent/contact.html')
