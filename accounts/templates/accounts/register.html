@@ -1,0 +1,72 @@
+{% extends 'rent/base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    .sign-up-form {
+        padding-top: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: var(--whiteColor);
+        gap: 2rem;
+        background-size: cover;
+        width: 100%;
+        min-height: 80vh;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgba(14, 14, 70, 0.9), rgba(14, 14, 70, 0.8)),
+        url("{% static 'rent/img/banner.jpg' %}");
+
+    }
+
+    @media (max-width: 768px) {
+        .sign-up-form {
+            flex-direction: column-reverse;
+        }
+    }
+</style>
+
+<body class="property-page">
+
+
+
+
+
+    <div class="sign-up-form padding">
+        <div class="sign-up">
+
+            <h2>Create an account to access exclusive features or do you have accounnt alread ? <a
+                    href="{% url 'login' %}">Login</a> </h2>
+        </div>
+        <div class="sign-up">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.username }}
+                {{ form.email }}
+                {{ form.phone_number }}
+                {{ form.role }}
+                {{ form.password1 }}
+                {{ form.password2 }}
+                <button type="submit">Sign Up</button>
+            </form>
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

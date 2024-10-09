@@ -54,40 +54,31 @@
 
         </div>
         <div class="contact-form">
-            <form action="">
+            <form method="POST">
+                {% csrf_token %}
                 <div class="f-input">
                     <label for="">Name</label> <br>
-                    <input type="text" placeholder="eg: Benjamin" required>
+                    <input type="text" name="name" placeholder="eg: Benjamin" required>
                 </div>
                 <div class="f-input">
                     <label for="">Email</label> <br>
-                    <input type="email" placeholder="eg: benjamiinoheneasare65@gmail.com" required>
+                    <input type="email" name="email" placeholder="eg: benjamiinoheneasare65@gmail.com" required>
                 </div>
+                <!-- <div class="f-input"></div>
+                    <label for="">Phone</label> <br>
+                    <input type="number" placeholder="+233 244 000 000" required>
+                </div> -->
                 <div class="f-input">
-                    <label for="">Name</label> <br>
-                   <textarea name="" id="" placeholder="eg: hi i need a house to rent" required></textarea>
+                    <label for="">Message</label> <br>
+                   <textarea name="message" id="" placeholder="eg: hi i need a house to rent" required></textarea>
                 </div>
 
-                <button>Submit</button>
+                <button type="submit">Submit</button>
             </form>
         </div>
     </div>
 
-
-
-
-
-
-
 </body>
-
-
-
-
-
-
-
-
 
 
 {% endblock %}

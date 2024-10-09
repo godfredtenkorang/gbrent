@@ -4,23 +4,24 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('propertyrent', views.propertyrent, name='propertyrent'),
-    path('propertysale', views.propertysale, name='propertysale'),
-    path('propertyDetail', views.propertyDetail, name='propertyDetail'),
-    path('wishListPage', views.wishListPage, name='wishListPage'),
-    path('userDashboard', views.userDashboard, name='userDashboard'),
-    path('dashboardHome', views.dashboardHome, name='dashboardHome'),
-    path('schedule', views.schedule, name='schedule'),
-    path('help', views.help, name='help'),
-    path('account', views.account, name='account'),
+    
+    path('house_for_rent', views.house_for_rent, name='house_for_rent'),
+    path('house_for_rent_detail/<slug:rent_slug>/', views.house_for_rent_detail, name='house_for_rent_detail'),
+    path('house_for_sale', views.house_for_sale, name='house_for_sale'),
+    path('house_for_sale_detail/<slug:sale_slug>/', views.house_for_sale_detail, name='house_for_sale_detail'),
+    
+    path('land', views.land, name='land'),
+    path('landDetail/<slug:land_slug>/', views.landDetail, name='landDetail'),
+    
+    path('hostel', views.hostel, name='hostel'),
+    path('hostelDetail/<slug:hostel_slug>/', views.hostelDetail, name='hostelDetail'),
+    
+    # path('search/<slug:category_slug>/', views.list_category, name='list-category'),
+  
+    
     path('about', views.about, name='about'),
     path('tenant', views.tenant, name='tenant'),
-    path('signUp', views.signUp, name='signUp'),
-    path('login', views.login, name='login'),
+    
     path('faq', views.faq, name='faq'),
-    path('hostelDetail', views.hostelDetail, name='hostelDetail'),
-    path('landDetail', views.landDetail, name='landDetail'),
-    path('hostel', views.hostel, name='hostel'),
-    path('land', views.land, name='land'),
     path('contact', views.contact, name='contact'),
 ]

@@ -1,53 +1,112 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import *
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 def index(request):
-    return render(request, 'rent/index.html')
-def propertyrent(request):
-    return render(request, 'rent/propertyrent.html')
+    testiminials = Testimonial.objects.all()
+    context = {
+        'testimonials': testiminials
+    }
+    return render(request, 'rent/index.html', context)
+
+# def categories(request):
+#     all_categories = Category.objects.all()
+#     return {'all_categories': all_categories}
+
+# def list_category(request, category_slug):
+#     category = get_object_or_404(Category, slug=category_slug)
+#     return render(request, 'rent/list_category.html')
 
 
-def propertyDetail(request):
-    return render(request, 'rent/propertyDetail.html')
-def wishListPage(request):
-    return render(request, 'rent/wishListPage.html')
-def userDashboard(request):
-    return render(request, 'rent/userDashboard.html')
-def dashboardHome(request):
-    return render(request, 'rent/dashboardHome.html')
-def schedule(request):
-    return render(request, 'rent/schedule.html')
-def help(request):
-    return render(request, 'rent/help.html')
-def account(request):
-    return render(request, 'rent/account.html')
+
+def house_for_rent(request):
+    houses = HouseForRent.objects.all()
+    context = {
+        'houses': houses
+    }
+    return render(request, 'rent/house/house_for_rent.html', context)
+
+def house_for_rent_detail(request, rent_slug):
+    house = get_object_or_404(HouseForRent, slug=rent_slug)
+    context = {
+        'house': house
+    }
+    return render(request, 'rent/house/house_for_rent_detail.html', context)
+
+def house_for_sale(request):
+    
+    houses = HouseForSale.objects.all()
+    context = {
+        'houses': houses
+    }
+    return render(request, 'rent/house/house_for_sale.html', context)
+
+
+def house_for_sale_detail(request, sale_slug):
+    house = get_object_or_404(HouseForSale, slug=sale_slug)
+    context = {
+        'house': house
+    }
+    return render(request, 'rent/house/house_for_sale_detail.html', context)
+
+
+
+
 def about(request):
     return render(request, 'rent/about.html')
 def tenant(request):
     return render(request, 'rent/tenant.html')
-def signUp(request):
-    return render(request, 'rent/signUp.html')
-def login(request):
-    return render(request, 'rent/login.html')
 
 
-def propertysale(request):
- return render(request, 'rent/propertysale.html')
+
 
 def faq(request):
  return render(request, 'rent/faq.html')
 
-def hostelDetail(request):
- return render(request, 'rent/hostelDetail.html')
 
-def landDetail(request):
- return render(request, 'rent/landDetail.html')
-
-def hostel(request):
- return render(request, 'rent/hostel.html')
 
 def land(request):
- return render(request, 'rent/land.html')
+    lands = LandForSale.objects.all()
+    context = {
+        'lands': lands,
+        'title': 'Land'
+    }
+    return render(request, 'rent/land/land.html', context)
+
+
+def landDetail(request, land_slug):
+    land = get_object_or_404(LandForSale, slug=land_slug)
+    context = {
+        'land': land,
+        'title': 'Land Detail'
+    }
+    return render(request, 'rent/land/landDetail.html', context)
+
+def hostel(request):
+    hostels = HostelForRent.objects.all()
+    context = {
+        'hostels': hostels,
+        'title': 'Hostels'
+    }
+    return render(request, 'rent/hostel/hostel.html', context)
+
+def hostelDetail(request, hostel_slug):
+    hostel = get_object_or_404(LandForSale, slug=hostel_slug)
+    context = {
+        'hostel': hostel,
+        'title': 'Hostel Detail'
+    }
+    return render(request, 'rent/hostel/hostelDetail.html', context)
+
 
 def contact(request):
- return render(request, 'rent/contact.html')
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        
+        message = request.POST['message']
+        contacts = Contact(name=name, email=email, message=message)
+        contacts.save()
+        return redirect('contact')
+    return render(request, 'rent/contact.html')

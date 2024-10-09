@@ -197,7 +197,7 @@
 
         <div class="product-property">
             <div class="product-c">
-              <a href="{% url 'propertyDetail' %}">
+              <a href="">
                    <img src="{% static 'rent/img/prop.jpg' %}" alt="">
               </a>
               <div class="f"><p>Featured</p></div>
@@ -217,7 +217,7 @@
        
           <div class="product-property">
             <div class="product-c">
-              <a href="{% url 'propertyDetail' %}">
+              <a href="">
                   <img src="{% static 'rent/img/prop.jpg' %}" alt="">
               </a>
               <div class="f"><p>Featured</p></div>
@@ -237,7 +237,7 @@
        
           <div class="product-property">
             <div class="product-c">
-              <a href="{% url 'propertyDetail' %}">
+              <a href="">
                   <img src="{% static 'rent/img/banner.jpg' %}" alt="">
               </a>
               <div class="f"><p>Featured</p></div>
@@ -256,7 +256,7 @@
           </div>
           <div class="product-property">
             <div class="product-c">
-              <a href="{% url 'propertyDetail' %}">
+              <a href="">
                   <img src="{% static 'rent/img/banner.jpg' %}" alt="">
               </a>
               <div class="f"><p>Featured</p></div>
@@ -294,7 +294,7 @@
     </div>
 
     <div class="view-all">
-        <a href="{% url 'propertyrent' %}">View all property <i class="fa-solid fa-greater-than"></i><i
+        <a href="">View all property <i class="fa-solid fa-greater-than"></i><i
                 class="fa-solid fa-greater-than"></i>
         </a>
     </div>
@@ -389,7 +389,7 @@
 
         <div class="product-property">
             <div class="product-c">
-              <a href="{% url 'propertyDetail' %}">
+              <a href="">
                    <img src="{% static 'rent/img/prop.jpg' %}" alt="">
               </a>
               <div class="f"><p>Featured</p></div>
@@ -409,7 +409,7 @@
        
           <div class="product-property">
             <div class="product-c">
-              <a href="{% url 'propertyDetail' %}">
+              <a href="">
                   <img src="{% static 'rent/img/prop.jpg' %}" alt="">
               </a>
               <div class="f"><p>Featured</p></div>
@@ -429,7 +429,7 @@
        
           <div class="product-property">
             <div class="product-c">
-              <a href="{% url 'propertyDetail' %}">
+              <a href="">
                   <img src="{% static 'rent/img/banner.jpg' %}" alt="">
               </a>
               <div class="f"><p>Featured</p></div>
@@ -448,7 +448,7 @@
           </div>
           <div class="product-property">
             <div class="product-c">
-              <a href="{% url 'propertyDetail' %}">
+              <a href="">
                   <img src="{% static 'rent/img/banner.jpg' %}" alt="">
               </a>
               <div class="f"><p>Featured</p></div>
@@ -465,28 +465,12 @@
                   </div>
               </div>
           </div>
-      
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     </div>
 
     <div class="view-all">
-        <a href="{% url 'propertysale' %}">View all property <i class="fa-solid fa-greater-than"></i><i
+        <a href="">View all property <i class="fa-solid fa-greater-than"></i><i
                 class="fa-solid fa-greater-than"></i>
         </a>
     </div>
@@ -504,7 +488,7 @@
 <!-- 
 <section class="explore-section padding">
     <p>Looking for a dream home? </p>
-    <a href="{% url 'propertyrent' %}">Explore Properties</a>
+    <a href="">Explore Properties</a>
 
 </section> -->
 
@@ -640,42 +624,20 @@
     </div>
     <div class="client-say-container">
         <div class="client-container">
+            {% for testimonial in testimonials %}
             <div class="client-say active">
                 <div class="client-img">
-                    <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+                    <img src="{{testimonial.image.url}}" alt="">
                     <i class="fa-solid fa-quote-left"></i>
                     <div class="client-detail">
-                        <h4>Mr Asare</h4>
-                        <p>Property Owner</p>
+                        <h4>{{testimonial.name}}</h4>
+                        <p>{{testimonial.title}}</p>
                     </div>
                 </div>
-                <p>As an outdoor enthusiast, I find the Tenting Platform incredibly useful. It connects campers with the
-                    best sites, ensuring a seamless and enjoyable experience in nature.</p>
+                <p>{{testimonial.content}}</p>
             </div>
-            <div class="client-say">
-                <div class="client-img">
-                    <img src="{% static 'rent/img/prop2.jpg' %}" alt="">
-                    <i class="fa-solid fa-quote-left"></i>
-                    <div class="client-detail">
-                        <h4>Ms. Agyeman</h4>
-                        <p>Camping Expert</p>
-                    </div>
-                </div>
-                <p>The Tenting Platform has revolutionized how we plan our trips. The variety of camping options
-                    available helps us find the perfect spot for every adventure.</p>
-            </div>
-            <div class="client-say">
-                <div class="client-img">
-                    <img src="{% static 'rent/img/prop2.jpg' %}" alt="">
-                    <i class="fa-solid fa-quote-left"></i>
-                    <div class="client-detail">
-                        <h4>Mr. Mensah</h4>
-                        <p>Family Camper</p>
-                    </div>
-                </div>
-                <p>With the Tenting Platform, I can easily browse and book campsites. The user-friendly interface and
-                    clear information make planning our family trips a breeze!</p>
-            </div>
+            {% endfor %}
+            
             <div class="next-btns">
                 <i class="fa-solid fa-less-than" id="prevBtn"></i>
                 <i class="fa-solid fa-greater-than" id="nextBtn"></i>

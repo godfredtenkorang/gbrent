@@ -58,12 +58,12 @@
                     <li class="dropdown">Categories <i class="fa-solid fa-caret-down"></i>
                         <!-- propert-category -->
                         <ul class="category">
-
-                            <li><a href="{% url 'hostel' %}">Hostel</a></li>
-                            <li><a href="{% url 'propertyrent' %}">House for rent</a></li>
-                            <li><a href="{% url 'propertysale' %}">House for Sale</a></li>
-                            <li><a href="{% url 'land' %}">Land for sale</a></li>
-
+                            <li><a href="{% url 'house_for_rent' %}">House for Rent</a></li>
+                            <li><a href="{% url 'house_for_sale' %}">House for Sale</a></li>
+                            <li><a href="{% url 'hostel' %}">Hostel for Rent</a></li>
+                            <li><a href="{% url 'land' %}">Land for Sale</a></li>
+                            <li><a href="">Car for Rent</a></li>
+                            <li><a href="">Car for Sale</a></li>
 
 
                         </ul>
@@ -93,9 +93,13 @@
                             <i class="fa-solid fa-caret-down"></i>
                         </div>
                         <div class="acount-links">
-                            <li><a href="{% url 'signUp' %}">Signup</a></li>
+                            {% if user.is_authenticated %}
+                            <li><a href="{% url 'logout' %}">Logout</a></li>
+                            <li><a href="{% url 'dashboardHome' %}">Dashboard</a></li>
+                            {% else %}
+                            <li><a href="{% url 'signUp' %}">Sign Up</a></li>
                             <li><a href="{% url 'login' %}">Login</a></li>
-                            <li><a href="">Wishlist</a></li>
+                            {% endif %}
                         </div>
                     </div>
 

@@ -29,7 +29,7 @@
             <!-- Sidebar -->
             <div class="sidebar" id="sidebar">
                 <div class="logos">
-                    <a href="{% url 'index' %}">Logo</a>
+                    <a href="{% url 'index' %}" style="color: white;">Logo</a>
                 </div>
 
                <div class="user">
@@ -46,7 +46,7 @@
                     <li><a href="{% url 'wishListPage' %}"><i class="fa-solid fa-heart"></i> Saved</a></li>
                     <li><a href="{% url 'help' %}"><i class="fa-solid fa-phone"></i> Help Center</a></li>
                     <li><a href="{% url 'account' %}"><i class="fa-solid fa-user"></i> Account Settings</a></li>
-                    <li><a href=""><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                    <li><a href="{% url 'logout' %}"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
                 </ul>
             </div>
 
