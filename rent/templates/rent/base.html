@@ -184,11 +184,11 @@
             <div class="footer-col">
                 <h5>Services</h5>
 
-                <li><a href="">Wish list</a></li>
+                <!-- <li><a href="">Wish list</a></li> -->
                 <li><a href="{% url 'login' %}">Login</a></li>
      
                 <li><a href="">Terms & conditions</a></li>
-                <li><a href="{% url 'tenant' %}">Become a tenant</a></li>
+                <!-- <li><a href="{% url 'tenant' %}">Become a tenant</a></li> -->
 
             </div>
 
@@ -355,7 +355,7 @@
         }
 
         document.getElementById('nextBtn').addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % testimonials.length; 
+            currentIndex = (currentIndex + 1) % testimonials.length; // Cycle back to the first
             showTestimonial(currentIndex);
         });
 
