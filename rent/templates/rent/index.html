@@ -17,23 +17,89 @@
         background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
         url("{% static 'rent/img/banner.jpg' %}");
     }
+
+    .what-client-say {
+        text-align: center;
+  position: relative;
+  background: url("{% static 'rent/img/BAN.jpg' %}") no-repeat center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  overflow: hidden;
+}
 </style>
 
 <!-- slider-show -->
 <section class="slider-section-container">
-    <div class="slide">
-        <img src="{% static 'rent/img/banner.jpg' %}" alt="">
-        <div class="slider-text padding">
-            <h1>Find a Perfect Place To Stay</h1>
-            <p>Explore our wide range of rental properties to find your ideal home away from home. <br> Whether you're
-                looking for a short-term stay or a long-term residence, <br> we have the perfect options tailored to
-                meet your needs and budget.</p>
-            <a href="">Make Enquiry</a>
-        </div>
-
-
+  <div class="slide active">
+    <img src="{% static 'rent/img/BAN.jpg' %}" alt="">
+    <div class="slider-text">
+      <h1>Find a Perfect Place To Stay</h1>
+      <p>Explore our wide range of rental properties to find your ideal home away from home.<br>
+        Whether you're looking for a short-term stay or a long-term residence,<br>
+        we have the perfect options tailored to meet your needs and budget.
+      </p>
+      <a href="">Make Enquiry</a>
     </div>
+  </div>
+
+  <div class="slide">
+    <img src="{% static 'rent/img/BAN2.jpg' %}" alt="">
+    <div class="slider-text">
+      <h1>Luxury Homes For You</h1>
+      <p>Discover premium properties with modern amenities and serene environments.<br>
+        Choose comfort, security, and affordability.
+      </p>
+      <a href="">View Properties</a>
+    </div>
+  </div>
+
+  <div class="slide">
+    <img src="{% static 'rent/img/BAN3.jpg' %}" alt="">
+    <div class="slider-text">
+      <h1>Trusted Property Experts</h1>
+      <p>We connect you with the best property deals in Ghana.<br>
+        Satisfaction guaranteed for buyers, renters, and investors.
+      </p>
+      <a href="">Get Started</a>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <div class="slider-controls">
+    <span class="prev">&#10094;</span>
+    <span class="next">&#10095;</span>
+  </div>
+
+  <!-- Pagination -->
+  <div class="slider-dots"></div>
 </section>
+
+
+
+<section class="about-section">
+    <div class="about-text">
+      <h2>About Us</h2>
+      <p>At <strong>GB Rent Properties</strong>, we specialize in selling affordable lands and building modern houses that meet the dreams of our clients.</p>
+      <p>ayment plans, and excellent customer service.</p>
+      <p>Our vision is to make property ownership accessible and stress-free for everyone.</p>
+    </div>
+    <div class="about-image">
+     <img src="{% static 'rent/img/MAN.jpg' %}" alt="">
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -174,7 +240,7 @@
 <!-- product section -->
 <section class="product-section-container padding">
     <div class="heading">
-        <h2>Featured Properties For Rent</h2>
+        <h2>Featured Properties For Sale</h2>
         <p> Hand-Picked selection of quality places
 
 
@@ -197,8 +263,8 @@
 
         <div class="product-property">
             <div class="product-c">
-              <a href="">
-                   <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+              <a href="{% url 'propertyDetails' %}">
+                   <img src="{% static 'rent/img/land.jpg' %}" alt="">
               </a>
               <div class="f"><p>Featured</p></div>
               <div class="price"><p>₵ 250</p></div>
@@ -207,18 +273,18 @@
               <div class="product-details">
                   <div class="name"><a href="">Ocean Breeze Villa</a></div>
                   <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Cape Coast</p></div>
-                  <div class="fet">
+                  <!-- <div class="fet">
                       <p><i class="fa-solid fa-bed"></i> 5 Beds</p>
                       <p><i class="fa-solid fa-bath"></i> 3 Baths</p>
                       <p><i class="fa-solid fa-ruler-combined"></i> 4000 Sqft</p>
-                  </div>
+                  </div> -->
               </div>
           </div>
        
           <div class="product-property">
             <div class="product-c">
               <a href="">
-                  <img src="{% static 'rent/img/prop.jpg' %}" alt="">
+                  <img src="{% static 'rent/img/images (2).jpeg' %}" alt="">
               </a>
               <div class="f"><p>Featured</p></div>
               <div class="price"><p>₵ 180</p></div>
@@ -227,18 +293,18 @@
               <div class="product-details">
                   <div class="name"><a href="">City Lights Apartment</a></div>
                   <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Accra Osu</p></div>
-                  <div class="fet">
+                  <!-- <div class="fet">
                       <p><i class="fa-solid fa-bed"></i> 3 Beds</p>
                       <p><i class="fa-solid fa-bath"></i> 2 Baths</p>
                       <p><i class="fa-solid fa-ruler-combined"></i> 2500 Sqft</p>
-                  </div>
+                  </div> -->
               </div>
           </div>
        
           <div class="product-property">
             <div class="product-c">
               <a href="">
-                  <img src="{% static 'rent/img/banner.jpg' %}" alt="">
+                  <img src="{% static 'rent/img/land1.jpeg' %}" alt="">
               </a>
               <div class="f"><p>Featured</p></div>
               <div class="price"><p>₵ 320</p></div>
@@ -247,17 +313,17 @@
               <div class="product-details">
                   <div class="name"><a href="">Sunset Beach House</a></div>
                   <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Takoradi</p></div>
-                  <div class="fet">
+                  <!-- <div class="fet">
                       <p><i class="fa-solid fa-bed"></i> 4 Beds</p>
                       <p><i class="fa-solid fa-bath"></i> 3 Baths</p>
                       <p><i class="fa-solid fa-ruler-combined"></i> 3500 Sqft</p>
-                  </div>
+                  </div> -->
               </div>
           </div>
           <div class="product-property">
             <div class="product-c">
               <a href="">
-                  <img src="{% static 'rent/img/banner.jpg' %}" alt="">
+                 <img src="{% static 'rent/img/image.jpg' %}" alt="">
               </a>
               <div class="f"><p>Featured</p></div>
               <div class="price"><p>₵ 320</p></div>
@@ -266,11 +332,11 @@
               <div class="product-details">
                   <div class="name"><a href="">Sunset Beach House</a></div>
                   <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Takoradi</p></div>
-                  <div class="fet">
+                  <!-- <div class="fet">
                       <p><i class="fa-solid fa-bed"></i> 4 Beds</p>
                       <p><i class="fa-solid fa-bath"></i> 3 Baths</p>
                       <p><i class="fa-solid fa-ruler-combined"></i> 3500 Sqft</p>
-                  </div>
+                  </div> -->
               </div>
           </div>
       
@@ -301,7 +367,7 @@
 </section>
 
 
-
+<!-- 
 <div class="cities-with-listin padding">
     <div class="heading">
         <h2>Cities Eith Listen</h2>
@@ -358,7 +424,7 @@
 
 
      
-</div>
+</div> -->
 
 
 
@@ -495,7 +561,7 @@
 
 
 
-
+<!-- 
 
 <div class="freeq-question padding">
     <div class="faq-img">
@@ -609,7 +675,7 @@
      
 
     </div>
-</div>
+</div> -->
 
  
 
@@ -627,7 +693,7 @@
             {% for testimonial in testimonials %}
             <div class="client-say active">
                 <div class="client-img">
-                    <img src="{{testimonial.image.url}}" alt="">
+                    <!-- <img src="{{testimonial.image.url}}" alt=""> -->
                     <i class="fa-solid fa-quote-left"></i>
                     <div class="client-detail">
                         <h4>{{testimonial.name}}</h4>
@@ -650,7 +716,71 @@
 
 
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".slide");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  const dotsContainer = document.querySelector(".slider-dots");
+  let currentIndex = 0;
+  let slideInterval;
 
+  // Create dots dynamically
+  slides.forEach((_, i) => {
+    const dot = document.createElement("span");
+    dot.dataset.index = i;
+    if (i === 0) dot.classList.add("active");
+    dotsContainer.appendChild(dot);
+  });
+  const dots = document.querySelectorAll(".slider-dots span");
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      dots[i].classList.remove("active");
+    });
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    let newIndex = (currentIndex + 1) % slides.length;
+    showSlide(newIndex);
+  }
+  function prevSlide() {
+    let newIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(newIndex);
+  }
+
+  // Auto slide
+  function startAutoSlide() {
+    slideInterval = setInterval(nextSlide, 5000);
+  }
+  function stopAutoSlide() {
+    clearInterval(slideInterval);
+  }
+
+  // Events
+  nextBtn.addEventListener("click", () => {
+    nextSlide();
+    stopAutoSlide(); startAutoSlide();
+  });
+  prevBtn.addEventListener("click", () => {
+    prevSlide();
+    stopAutoSlide(); startAutoSlide();
+  });
+  dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+      showSlide(parseInt(dot.dataset.index));
+      stopAutoSlide(); startAutoSlide();
+    });
+  });
+
+  // Init
+  startAutoSlide();
+});
+</script>
 
 
 

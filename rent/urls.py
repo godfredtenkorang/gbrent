@@ -21,6 +21,7 @@ urlpatterns = [
     
     path('about', views.about, name='about'),
     path('tenant', views.tenant, name='tenant'),
+    path('propertyDetails', views.propertyDetails, name='propertyDetails'),
     
     path('faq', views.faq, name='faq'),
     path('contact', views.contact, name='contact'),
