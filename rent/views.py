@@ -65,6 +65,10 @@ def faq(request):
  return render(request, 'rent/faq.html')
 
 
+def propertyDetails(request):
+ return render(request, 'rent/propertyDetails.html')
+
+
 
 def land(request):
     lands = LandForSale.objects.all()
