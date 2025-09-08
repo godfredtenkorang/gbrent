@@ -6,10 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'rent/styles.css' %}">
+    <link rel="icon" href="{% static 'rent/img/Eleob.png' %}" type="image/jpeg">
     {% if title %}
-    <title>GB Rent - {{ title }}</title>
+    <title>Eleob Investment - {{ title }}</title>
     {% else %}
-    <title>GB Rent</title>
+    <title>Eleob Investment</title>
     {% endif %}
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -49,25 +50,26 @@
             <nav class="nav-links">
                 <div class="logo">
 
-                    <a href="{% url 'index' %}"><i class="fa-solid fa-house"></i> GB<span>RENT </span></a>
+                    <a href="{% url 'index' %}"><img src="{% static 'rent/img/Eleob.png' %}" height="120" width="150" alt=""></a>
                 </div>
                 <ul class="menu-links ">
                     <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'land' %}">Properties</a></li>
 
 
-                    <li class="dropdown">Categories <i class="fa-solid fa-caret-down"></i>
+                    <!-- <li class="dropdown">Categories <i class="fa-solid fa-caret-down"></i> -->
                         <!-- propert-category -->
-                        <ul class="category">
-                            <li><a href="{% url 'house_for_rent' %}">House for Rent</a></li>
-                            <li><a href="{% url 'house_for_sale' %}">House for Sale</a></li>
-                            <li><a href="{% url 'hostel' %}">Hostel for Rent</a></li>
-                            <li><a href="{% url 'land' %}">Land for Sale</a></li>
-                            <li><a href="">Car for Rent</a></li>
-                            <li><a href="">Car for Sale</a></li>
+                        <!-- <ul class="category"> -->
+                            <!-- <li><a href="{% url 'house_for_rent' %}">House for Rent</a></li> -->
+                            <!-- <li><a href="{% url 'house_for_sale' %}">House for Sale</a></li> -->
+                            <!-- <li><a href="{% url 'hostel' %}">Hostel for Rent</a></li> -->
+                            <!-- <li><a href="{% url 'land' %}">Land for Sale</a></li> -->
+                            <!-- <li><a href="">Car for Rent</a></li>
+                            <li><a href="">Car for Sale</a></li> -->
 
 
-                        </ul>
-                    </li>
+                        <!-- </ul>
+                    </li> -->
                     <!-- <li class="dropdown">Propert For Sale <i class="fa-solid fa-caret-down"></i>
                       
                         <ul class="category">
@@ -95,7 +97,7 @@
                         <div class="acount-links">
                             {% if user.is_authenticated %}
                             <li><a href="{% url 'logout' %}">Logout</a></li>
-                            <li><a href="{% url 'dashboardHome' %}">Dashboard</a></li>
+                            <!-- <li><a href="{% url 'dashboardHome' %}">Dashboard</a></li> -->
                             {% else %}
                             <li><a href="{% url 'signUp' %}">Sign Up</a></li>
                             <li><a href="{% url 'login' %}">Login</a></li>
@@ -161,8 +163,8 @@
     <footer>
         <div class="footer padding">
             <div class="footer-col">
-                <p> Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the
-                    printing.</p>
+                <p> At Eleob Investments LTD, we specialize in helping individuals, families, and businesses secure their dream properties
+                with ease and confidence.</p>
                 <p>Ghana</p>
                 <a href=""><i class="fa-solid fa-envelope"></i> infogbrent@gmail.com</a> <br>
                 <a href=""><i class="fa-solid fa-phone"></i> 0558156844</a> <br>
@@ -174,11 +176,11 @@
             </div>
             <div class="footer-col">
                 <h5>Company</h5>
-                <li><a href="">About</a></li>
-                <li><a href="">Blog</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <!-- <li><a href="">Blog</a></li> -->
               
                 <li><a href="{% url 'faq' %}">FAQ</a></li>
-                <li><a href="">Contact us</a></li>
+                <li><a href="{% url 'contact' %}">Contact us</a></li>
 
             </div>
             <div class="footer-col">
@@ -205,7 +207,7 @@
         </div>
 
         <div class="copy-right">
-            <p> All Rights Reserved @ Company
+            <p> All Rights Reserved @ ELEOB INVESTMENTS LTD
 
             </p>
             <li><a href="">Terms & conditions</a></li>

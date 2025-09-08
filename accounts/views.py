@@ -30,7 +30,7 @@ def login(request):
             
             if user is not None:
                 auth.login(request, user)
-                return redirect("dashboardHome")
+                return redirect("index")
             
     context = {
         'form': form,

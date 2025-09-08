@@ -4,9 +4,11 @@ from django.shortcuts import get_object_or_404
 
 # Create your views here.
 def index(request):
+    properties = LandForSale.objects.all()[:4]
     testiminials = Testimonial.objects.all()
     context = {
-        'testimonials': testiminials
+        'testimonials': testiminials,
+        'properties': properties
     }
     return render(request, 'rent/index.html', context)
 

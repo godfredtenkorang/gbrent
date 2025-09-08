@@ -19,10 +19,10 @@ urlpatterns = [
     # path('search/<slug:category_slug>/', views.list_category, name='list-category'),
   
     
-    path('about', views.about, name='about'),
-    path('tenant', views.tenant, name='tenant'),
-    path('propertyDetails', views.propertyDetails, name='propertyDetails'),
+    path('about/', views.about, name='about'),
+    path('tenant/', views.tenant, name='tenant'),
+    path('propertyDetails/', views.propertyDetails, name='propertyDetails'),
     
-    path('faq', views.faq, name='faq'),
-    path('contact', views.contact, name='contact'),
+    path('faq/', views.faq, name='faq'),
+    path('contact/', views.contact, name='contact'),
 ]

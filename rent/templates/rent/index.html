@@ -20,72 +20,76 @@
 
     .what-client-say {
         text-align: center;
-  position: relative;
-  background: url("{% static 'rent/img/BAN.jpg' %}") no-repeat center/cover;
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px;
-  overflow: hidden;
-}
+        position: relative;
+        background: url("{% static 'rent/img/BAN.jpg' %}") no-repeat center/cover;
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+        overflow: hidden;
+    }
 </style>
 
 <!-- slider-show -->
 <section class="slider-section-container">
-  <div class="slide active">
-    <img src="{% static 'rent/img/BAN.jpg' %}" alt="">
-    <div class="slider-text">
-      <h1>Find a Perfect Place To Stay</h1>
-      <p>Explore our wide range of rental properties to find your ideal home away from home.<br>
-        Whether you're looking for a short-term stay or a long-term residence,<br>
-        we have the perfect options tailored to meet your needs and budget.
-      </p>
-      <a href="">Make Enquiry</a>
+    <div class="slide active">
+        <img src="{% static 'rent/img/BAN.jpg' %}" alt="">
+        <div class="slider-text">
+            <h1>Find a Perfect Place To Stay</h1>
+            <p>Explore our wide range of rental properties to find your ideal home away from home.<br>
+                Whether you're looking for a short-term stay or a long-term residence,<br>
+                we have the perfect options tailored to meet your needs and budget.
+            </p>
+            <a href="{% url 'contact' %}">Make Enquiry</a>
+        </div>
     </div>
-  </div>
 
-  <div class="slide">
-    <img src="{% static 'rent/img/BAN2.jpg' %}" alt="">
-    <div class="slider-text">
-      <h1>Luxury Homes For You</h1>
-      <p>Discover premium properties with modern amenities and serene environments.<br>
-        Choose comfort, security, and affordability.
-      </p>
-      <a href="">View Properties</a>
+    <div class="slide">
+        <img src="{% static 'rent/img/BAN2.jpg' %}" alt="">
+        <div class="slider-text">
+            <h1>Luxury Homes For You</h1>
+            <p>Discover premium properties with modern amenities and serene environments.<br>
+                Choose comfort, security, and affordability.
+            </p>
+            <a href="{% url 'land' %}">View Properties</a>
+        </div>
     </div>
-  </div>
 
-  <div class="slide">
-    <img src="{% static 'rent/img/BAN3.jpg' %}" alt="">
-    <div class="slider-text">
-      <h1>Trusted Property Experts</h1>
-      <p>We connect you with the best property deals in Ghana.<br>
-        Satisfaction guaranteed for buyers, renters, and investors.
-      </p>
-      <a href="">Get Started</a>
+    <div class="slide">
+        <img src="{% static 'rent/img/BAN3.jpg' %}" alt="">
+        <div class="slider-text">
+            <h1>Trusted Property Experts</h1>
+            <p>We connect you with the best property deals in Ghana.<br>
+                Satisfaction guaranteed for buyers, renters, and investors.
+            </p>
+            <a href="{% url 'index' %}">Get Started</a>
+        </div>
     </div>
-  </div>
 
-  <!-- Navigation -->
-  <div class="slider-controls">
-    <span class="prev">&#10094;</span>
-    <span class="next">&#10095;</span>
-  </div>
+    <!-- Navigation -->
+    <div class="slider-controls">
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+    </div>
 
-  <!-- Pagination -->
-  <div class="slider-dots"></div>
+    <!-- Pagination -->
+    <div class="slider-dots"></div>
 </section>
 
 
 
 <div class="about-sections padding">
     <div class="about-image">
-          <img src="{% static 'rent/img/MAN.jpg' %}" alt="">
-       
+        <img src="{% static 'rent/img/MAN.jpg' %}" alt="">
+
     </div>
     <div class="about-texts">
         <h2>About Us</h2>
-        <p>At GB Rent, we are proud to be the leading online marketplace for real estate rentals and sales, connecting people with their perfect property solutions. Whether you’re looking for a home, a hostel, a vehicle, or a piece of land, our platform is designed to make the process of finding and renting or purchasing property simple, transparent, and reliable. </p>
-       
+        <p>At Eleob Investments LTD, we specialize in helping individuals, families, and businesses secure their dream
+            properties
+            with ease and confidence. Whether you’re looking to purchase prime land for future development or move into
+            a
+            ready-built home, we provide trusted solutions that match your vision and investment goals.</p>
+
 
     </div>
 </div>
@@ -260,87 +264,35 @@
         </p>
     </div>
     <div class="product-grid">
-
+        {% for property in properties %}
         <div class="product-property">
             <div class="product-c">
-              <a href="{% url 'propertyDetails' %}">
-                   <img src="{% static 'rent/img/land.jpg' %}" alt="">
-              </a>
-              <div class="f"><p>Featured</p></div>
-              <div class="price"><p>₵ 250</p></div>
-              <!-- <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div> -->
+                <a href="{% url 'landDetail' property.slug %}">
+                    <img src="{{ property.image1.url }}" alt="">
+                </a>
+                <div class="f">
+                    <p>Featured</p>
+                </div>
+                <div class="price">
+                    <p>₵ {{ property.price }}</p>
+                </div>
+                <!-- <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div> -->
             </div>
-              <div class="product-details">
-                  <div class="name"><a href="">Ocean Breeze Villa</a></div>
-                  <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Cape Coast</p></div>
-                  <div class="fet">
-                      <p><i class="fa-solid fa-bed"></i> 5 Beds</p>
-                      <p><i class="fa-solid fa-bath"></i> 3 Baths</p>
-                      <p><i class="fa-solid fa-ruler-combined"></i> 4000 Sqft</p>
-                  </div>
-              </div>
-          </div>
-       
-          <div class="product-property">
-            <div class="product-c">
-              <a href="">
-                  <img src="{% static 'rent/img/images (2).jpeg' %}" alt="">
-              </a>
-              <div class="f"><p>Featured</p></div>
-              <div class="price"><p>₵ 180</p></div>
-              <!-- <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div> -->
+            <div class="product-details">
+                <div class="name"><a href="">{{ property.title }}</a></div>
+                <div class="loca">
+                    <p><i class="fa-solid fa-location-dot"></i> {{ property.location }}</p>
+                </div>
+                <!-- <div class="fet">
+                    <p><i class="fa-solid fa-bed"></i> 5 Beds</p>
+                    <p><i class="fa-solid fa-bath"></i> 3 Baths</p>
+                    <p><i class="fa-solid fa-ruler-combined"></i> 4000 Sqft</p>
+                </div> -->
             </div>
-              <div class="product-details">
-                  <div class="name"><a href="">City Lights Apartment</a></div>
-                  <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Accra Osu</p></div>
-                  <!-- <div class="fet">
-                      <p><i class="fa-solid fa-bed"></i> 3 Beds</p>
-                      <p><i class="fa-solid fa-bath"></i> 2 Baths</p>
-                      <p><i class="fa-solid fa-ruler-combined"></i> 2500 Sqft</p>
-                  </div> -->
-              </div>
-          </div>
-       
-          <div class="product-property">
-            <div class="product-c">
-              <a href="">
-                  <img src="{% static 'rent/img/land1.jpeg' %}" alt="">
-              </a>
-              <div class="f"><p>Featured</p></div>
-              <div class="price"><p>₵ 320</p></div>
-              <!-- <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div> -->
-            </div>
-              <div class="product-details">
-                  <div class="name"><a href="">Sunset Beach House</a></div>
-                  <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Takoradi</p></div>
-                  <!-- <div class="fet">
-                      <p><i class="fa-solid fa-bed"></i> 4 Beds</p>
-                      <p><i class="fa-solid fa-bath"></i> 3 Baths</p>
-                      <p><i class="fa-solid fa-ruler-combined"></i> 3500 Sqft</p>
-                  </div> -->
-              </div>
-          </div>
-          <div class="product-property">
-            <div class="product-c">
-              <a href="">
-                 <img src="{% static 'rent/img/image.jpg' %}" alt="">
-              </a>
-              <div class="f"><p>Featured</p></div>
-              <div class="price"><p>₵ 320</p></div>
-              <!-- <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div> -->
-            </div>
-              <div class="product-details">
-                  <div class="name"><a href="">Sunset Beach House</a></div>
-                  <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Takoradi</p></div>
-                  <!-- <div class="fet">
-                      <p><i class="fa-solid fa-bed"></i> 4 Beds</p>
-                      <p><i class="fa-solid fa-bath"></i> 3 Baths</p>
-                      <p><i class="fa-solid fa-ruler-combined"></i> 3500 Sqft</p>
-                  </div> -->
-              </div>
-          </div>
-      
-   
+        </div>
+        {% endfor %}
+
+
 
 
 
@@ -360,8 +312,7 @@
     </div>
 
     <div class="view-all">
-        <a href="">View all property <i class="fa-solid fa-greater-than"></i><i
-                class="fa-solid fa-greater-than"></i>
+        <a href="{% url 'land' %}">View all property <i class="fa-solid fa-greater-than"></i><i class="fa-solid fa-greater-than"></i>
         </a>
     </div>
 </section>
@@ -425,122 +376,6 @@
 
      
 </div> -->
-
-
-
-
-<!-- product section -->
-<section class="product-section-container padding">
-    <div class="heading">
-        <h2>Featured Properties For Sale</h2>
-        <!-- <p> Hand-Picked selection of quality places -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        </p>
-    </div>
-    <div class="product-grid">
-
-        <div class="product-property">
-            <div class="product-c">
-              <a href="">
-                   <img src="{% static 'rent/img/prop.jpg' %}" alt="">
-              </a>
-              <div class="f"><p>Featured</p></div>
-              <div class="price"><p>₵ 250</p></div>
-              <!-- <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div> -->
-            </div>
-              <div class="product-details">
-                  <div class="name"><a href="">Ocean Breeze Villa</a></div>
-                  <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Cape Coast</p></div>
-                  <!-- <div class="fet">
-                      <p><i class="fa-solid fa-bed"></i> 5 Beds</p>
-                      <p><i class="fa-solid fa-bath"></i> 3 Baths</p>
-                      <p><i class="fa-solid fa-ruler-combined"></i> 4000 Sqft</p>
-                  </div> -->
-              </div>
-          </div>
-       
-          <div class="product-property">
-            <div class="product-c">
-              <a href="">
-                  <img src="{% static 'rent/img/prop.jpg' %}" alt="">
-              </a>
-              <div class="f"><p>Featured</p></div>
-              <div class="price"><p>₵ 180</p></div>
-              <!-- <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div> -->
-            </div>
-              <div class="product-details">
-                  <div class="name"><a href="">City Lights Apartment</a></div>
-                  <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Accra Osu</p></div>
-                  <!-- <div class="fet">
-                      <p><i class="fa-solid fa-bed"></i> 3 Beds</p>
-                      <p><i class="fa-solid fa-bath"></i> 2 Baths</p>
-                      <p><i class="fa-solid fa-ruler-combined"></i> 2500 Sqft</p>
-                  </div> -->
-              </div>
-          </div>
-       
-          <div class="product-property">
-            <div class="product-c">
-              <a href="">
-                  <img src="{% static 'rent/img/banner.jpg' %}" alt="">
-              </a>
-              <div class="f"><p>Featured</p></div>
-              <div class="price"><p>₵ 320</p></div>
-              <!-- <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div> -->
-            </div>
-              <div class="product-details">
-                  <div class="name"><a href="">Sunset Beach House</a></div>
-                  <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Takoradi</p></div>
-                  <!-- <div class="fet">
-                      <p><i class="fa-solid fa-bed"></i> 4 Beds</p>
-                      <p><i class="fa-solid fa-bath"></i> 3 Baths</p>
-                      <p><i class="fa-solid fa-ruler-combined"></i> 3500 Sqft</p>
-                  </div> -->
-              </div>
-          </div>
-          <div class="product-property">
-            <div class="product-c">
-              <a href="">
-                  <img src="{% static 'rent/img/banner.jpg' %}" alt="">
-              </a>
-              <div class="f"><p>Featured</p></div>
-              <div class="price"><p>₵ 320</p></div>
-              <!-- <div class="favourite"><a href=""><i class="fa-regular fa-heart"></i></a></div> -->
-            </div>
-              <div class="product-details">
-                  <div class="name"><a href="">Sunset Beach House</a></div>
-                  <div class="loca"><p><i class="fa-solid fa-location-dot"></i> Takoradi</p></div>
-                  <!-- <div class="fet">
-                      <p><i class="fa-solid fa-bed"></i> 4 Beds</p>
-                      <p><i class="fa-solid fa-bath"></i> 3 Baths</p>
-                      <p><i class="fa-solid fa-ruler-combined"></i> 3500 Sqft</p>
-                  </div> -->
-              </div>
-          </div>
-
-
-    </div>
-
-    <div class="view-all">
-        <a href="">View all property <i class="fa-solid fa-greater-than"></i><i
-                class="fa-solid fa-greater-than"></i>
-        </a>
-    </div>
-</section>
 
 
 
@@ -677,14 +512,14 @@
     </div>
 </div> -->
 
- 
+
 
 
 
 
 
 <!-- what client say -->
- <section class="what-client-say padding">
+<section class="what-client-say padding">
     <div class="heading">
         <h2>What Client Say</h2>
     </div>
@@ -703,7 +538,7 @@
                 <p>{{testimonial.content}}</p>
             </div>
             {% endfor %}
-            
+
             <div class="next-btns">
                 <i class="fa-solid fa-less-than" id="prevBtn"></i>
                 <i class="fa-solid fa-greater-than" id="nextBtn"></i>
@@ -712,74 +547,74 @@
 
 
 
-</section> 
+</section>
 
 
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = document.querySelectorAll(".slide");
-  const prevBtn = document.querySelector(".prev");
-  const nextBtn = document.querySelector(".next");
-  const dotsContainer = document.querySelector(".slider-dots");
-  let currentIndex = 0;
-  let slideInterval;
+    document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.querySelectorAll(".slide");
+        const prevBtn = document.querySelector(".prev");
+        const nextBtn = document.querySelector(".next");
+        const dotsContainer = document.querySelector(".slider-dots");
+        let currentIndex = 0;
+        let slideInterval;
 
-  // Create dots dynamically
-  slides.forEach((_, i) => {
-    const dot = document.createElement("span");
-    dot.dataset.index = i;
-    if (i === 0) dot.classList.add("active");
-    dotsContainer.appendChild(dot);
-  });
-  const dots = document.querySelectorAll(".slider-dots span");
+        // Create dots dynamically
+        slides.forEach((_, i) => {
+            const dot = document.createElement("span");
+            dot.dataset.index = i;
+            if (i === 0) dot.classList.add("active");
+            dotsContainer.appendChild(dot);
+        });
+        const dots = document.querySelectorAll(".slider-dots span");
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.remove("active");
-      dots[i].classList.remove("active");
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                dots[i].classList.remove("active");
+            });
+            slides[index].classList.add("active");
+            dots[index].classList.add("active");
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            let newIndex = (currentIndex + 1) % slides.length;
+            showSlide(newIndex);
+        }
+        function prevSlide() {
+            let newIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(newIndex);
+        }
+
+        // Auto slide
+        function startAutoSlide() {
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+        function stopAutoSlide() {
+            clearInterval(slideInterval);
+        }
+
+        // Events
+        nextBtn.addEventListener("click", () => {
+            nextSlide();
+            stopAutoSlide(); startAutoSlide();
+        });
+        prevBtn.addEventListener("click", () => {
+            prevSlide();
+            stopAutoSlide(); startAutoSlide();
+        });
+        dots.forEach(dot => {
+            dot.addEventListener("click", () => {
+                showSlide(parseInt(dot.dataset.index));
+                stopAutoSlide(); startAutoSlide();
+            });
+        });
+
+        // Init
+        startAutoSlide();
     });
-    slides[index].classList.add("active");
-    dots[index].classList.add("active");
-    currentIndex = index;
-  }
-
-  function nextSlide() {
-    let newIndex = (currentIndex + 1) % slides.length;
-    showSlide(newIndex);
-  }
-  function prevSlide() {
-    let newIndex = (currentIndex - 1 + slides.length) % slides.length;
-    showSlide(newIndex);
-  }
-
-  // Auto slide
-  function startAutoSlide() {
-    slideInterval = setInterval(nextSlide, 5000);
-  }
-  function stopAutoSlide() {
-    clearInterval(slideInterval);
-  }
-
-  // Events
-  nextBtn.addEventListener("click", () => {
-    nextSlide();
-    stopAutoSlide(); startAutoSlide();
-  });
-  prevBtn.addEventListener("click", () => {
-    prevSlide();
-    stopAutoSlide(); startAutoSlide();
-  });
-  dots.forEach(dot => {
-    dot.addEventListener("click", () => {
-      showSlide(parseInt(dot.dataset.index));
-      stopAutoSlide(); startAutoSlide();
-    });
-  });
-
-  // Init
-  startAutoSlide();
-});
 </script>
 
 
