@@ -549,6 +549,58 @@
 
 </section>
 
+ <div class="gallery-container">
+  <div class="heading">
+    <h2>Our Team</h2>
+  </div>
+
+
+  <!-- team -->
+
+  <div class="wrapper">
+    <i id="left" class="fa-solid fa-angle-left"></i>
+    <div class="carousel">
+      <div class="team">
+        <img src="{% static 'rent/img/BAN3.jpg' %}" alt="">
+        <h3>Daniel Birikorang</h3>
+        <p>Lead Pastor</p>
+      </div>
+
+      <div class="team">
+        <img src="{% static 'rent/img/BAN3.jpg' %}" alt="">
+        <h3>Ama Mensah</h3>
+        <p>Youth Coordinator</p>
+      </div>
+
+      <div class="team">
+        <img src="{% static 'rent/img/BAN3.jpg' %}" alt="">
+        <h3>Kwame Asare</h3>
+        <p>Media Lead</p>
+      </div>
+
+      <div class="team">
+        <img src="{% static 'rent/img/BAN3.jpg' %}" alt="">
+        <h3>Efua Boateng</h3>
+        <p>Event Planner</p>
+      </div>
+    </div>
+    <i id="right" class="fa-solid fa-angle-right"></i>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script>
@@ -619,6 +671,75 @@
 
 
 
+ <script>
+      const carousel = document.querySelector(".carousel"),
+      firstCard = carousel.querySelectorAll(".team")[0],
+      arrowIcons = document.querySelectorAll(".wrapper i");
+
+let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+
+const showHideIcons = () => {
+  let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+  arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+  arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
+}
+
+arrowIcons.forEach(icon => {
+  icon.addEventListener("click", () => {
+    let firstCardWidth = firstCard.clientWidth + 14; // card width + margin
+    carousel.scrollLeft += icon.id == "left" ? -firstCardWidth : firstCardWidth;
+    setTimeout(showHideIcons, 60);
+  });
+});
+
+const autoSlide = () => {
+  if (carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
+
+  positionDiff = Math.abs(positionDiff);
+  let firstCardWidth = firstCard.clientWidth + 14;
+  let valDifference = firstCardWidth - positionDiff;
+
+  if (carousel.scrollLeft > prevScrollLeft) {
+    carousel.scrollLeft += positionDiff > firstCardWidth / 3 ? valDifference : -positionDiff;
+  } else {
+    carousel.scrollLeft -= positionDiff > firstCardWidth / 3 ? valDifference : -positionDiff;
+  }
+}
+
+const dragStart = (e) => {
+  isDragStart = true;
+  prevPageX = e.pageX || e.touches[0].pageX;
+  prevScrollLeft = carousel.scrollLeft;
+}
+
+const dragging = (e) => {
+  if (!isDragStart) return;
+  e.preventDefault();
+  isDragging = true;
+  carousel.classList.add("dragging");
+  positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+  carousel.scrollLeft = prevScrollLeft - positionDiff;
+  showHideIcons();
+}
+
+const dragStop = () => {
+  isDragStart = false;
+  carousel.classList.remove("dragging");
+  if (!isDragging) return;
+  isDragging = false;
+  autoSlide();
+}
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("touchstart", dragStart);
+
+document.addEventListener("mousemove", dragging);
+carousel.addEventListener("touchmove", dragging);
+
+document.addEventListener("mouseup", dragStop);
+carousel.addEventListener("touchend", dragStop);
+
+    </script>
 
 
 
