@@ -193,6 +193,30 @@ class HostelForRent(models.Model):
         return f"{self.title} - {self.location} (For Rent)"
 
 
+class Booking(models.Model):
+    property = models.ForeignKey(LandForSale, on_delete=models.CASCADE, related_name='bookings')
+    full_name = models.CharField(max_length=255)  # Full name of the person booking
+    email = models.EmailField()  # Email address of the person booking
+    phone_number = models.CharField(max_length=15)  # Contact phone number
+    additional_requests = models.TextField(blank=True, null=True)  # Any additional requests or information
+    date_booked = models.DateTimeField(auto_now_add=True)  # Automatically records the booking date
+
+    def __str__(self):
+        return f"Booking by {self.full_name} for {self.property.title}"
+    
+class TeamMember(models.Model):
+    name = models.CharField(max_length=100, null=True, blank=True)
+    title = models.CharField(max_length=100, null=True, blank=True)
+    bio = models.TextField(null=True, blank=True)
+    image = models.ImageField(upload_to="team_img")
+    date_added = models.DateTimeField(auto_now_add=True)
+    
+    class Meta:
+        verbose_name_plural = "Team Members"
+        ordering = ['-date_added']
+        
+    def __str__(self):
+        return f"{self.name} - {self.title}"
 
 
 class Contact(models.Model):

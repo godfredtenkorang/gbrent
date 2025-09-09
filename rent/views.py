@@ -6,9 +6,11 @@ from django.shortcuts import get_object_or_404
 def index(request):
     properties = LandForSale.objects.all()[:4]
     testiminials = Testimonial.objects.all()
+    teams = TeamMember.objects.all()
     context = {
         'testimonials': testiminials,
-        'properties': properties
+        'properties': properties,
+        'teams': teams
     }
     return render(request, 'rent/index.html', context)
 
@@ -83,6 +85,24 @@ def land(request):
 
 def landDetail(request, land_slug):
     land = get_object_or_404(LandForSale, slug=land_slug)
+    if request.method == 'POST':
+        full_name = request.POST.get('full_name')
+        email = request.POST.get('email')
+        phone_number = request.POST.get('phone_number')
+        additional_requests = request.POST.get('additional_requests')
+        
+        # Here, you would typically save the booking information to the database
+        # For example:
+        Booking.objects.create(
+            property=land,
+            full_name=full_name,
+            email=email,
+            phone_number=phone_number,
+            additional_requests=additional_requests
+        )
+        
+        # Redirect to a success page or back to the land detail page
+        return redirect('landDetail', land_slug=land.slug)
     context = {
         'land': land,
         'title': 'Land Detail'

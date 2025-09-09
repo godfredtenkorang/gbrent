@@ -33,15 +33,15 @@
         <!-- first header -->
         <div class="first-header-container">
             <div class="first-header-row">
-                <a href=""><i class="fa-solid fa-envelope"></i> infogbrent@gmail.com</a>
-                <a href=""><i class="fa-solid fa-phone"></i> 0558156844</a>
+                <a href="mailto:eleobinvestments@gmail.com"><i class="fa-solid fa-envelope"></i> eleobinvestments@gmail.com</a>
+                <a href="tel:+233341441135"><i class="fa-solid fa-phone"></i> +233241441135</a>
             </div>
             <div class="first-header-row">
-                <a href="https://web.facebook.com/gh.kojosweet.5"> <i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.tiktok.com/@benjaminoheneasare?lang=en"> <i class="fa-brands fa-tiktok"></i></a>
-                <a href="https://github.com/Benjamin-Ohene-Asare"> <i class="fa-brands fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/benjamin-ohene-asare/"> <i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://wa.link/8gw4oo"> <i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""> <i class="fa-brands fa-facebook"></i></a>
+                <a href=""> <i class="fa-brands fa-tiktok"></i></a>
+                <a href=""> <i class="fa-brands fa-github"></i></a>
+                <a href=""> <i class="fa-brands fa-linkedin"></i></a>
+                <a href=""> <i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
 
@@ -89,7 +89,7 @@
 
                     <li><a href="{% url 'about' %}">About</a></li>
                     <li><a href="{% url 'contact' %}">Contact</a></li>
-                    <div class="account">
+                    <!-- <div class="account">
                         <div class="user-icon">
                             <i class="fa-solid fa-user-plus"></i>
                             <i class="fa-solid fa-caret-down"></i>
@@ -97,13 +97,13 @@
                         <div class="acount-links">
                             {% if user.is_authenticated %}
                             <li><a href="{% url 'logout' %}">Logout</a></li>
-                            <!-- <li><a href="{% url 'dashboardHome' %}">Dashboard</a></li> -->
+                            <li><a href="{% url 'dashboardHome' %}">Dashboard</a></li>
                             {% else %}
                             <li><a href="{% url 'signUp' %}">Sign Up</a></li>
                             <li><a href="{% url 'login' %}">Login</a></li>
                             {% endif %}
                         </div>
-                    </div>
+                    </div> -->
 
 
                      <div class="close-nav click-nav">
@@ -165,9 +165,9 @@
             <div class="footer-col">
                 <p> At Eleob Investments LTD, we specialize in helping individuals, families, and businesses secure their dream properties
                 with ease and confidence.</p>
-                <p>Ghana</p>
-                <a href=""><i class="fa-solid fa-envelope"></i> infogbrent@gmail.com</a> <br>
-                <a href=""><i class="fa-solid fa-phone"></i> 0558156844</a> <br>
+                <p><i class="fa-solid fa-location"></i> Accra - Teshie Abomah</p>
+                <a href="mailto:eleobinvestments@gmail.com"><i class="fa-solid fa-envelope"></i> eleobinvestments@gmail.com</a> <br>
+                <a href="tel:+233241441135"><i class="fa-solid fa-phone"></i> +233241441135</a> <br>
                 <div class="socials">
                     <a href=""><i class="fa-brands fa-facebook"></i> </a>
                     <a href=""><i class="fa-brands fa-instagram"></i> </a>

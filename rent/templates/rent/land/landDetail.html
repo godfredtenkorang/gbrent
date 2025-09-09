@@ -65,9 +65,9 @@
                 <p>GH₵ {{land.price}}</p>
             </div>
 
-            <div class="wish-list">
+            <!-- <div class="wish-list">
                 <a href=""><i class="fa-regular fa-heart"></i></a>
-            </div>
+            </div> -->
 
         </div>
     </div>
@@ -119,8 +119,10 @@
                 <h3>Amenities</h3>
                 <div class="amenities">
                   
-                    <p><i class="fa-solid fa-bolt"></i> Electricity</p> <!-- Correct icon for Electricity -->
-                    <p><i class="fa-solid fa-water"></i> Water</p> <!-- Correct icon for Water -->
+                    <p><i class="fa-solid fa-bolt"></i>Acres: {{ land.size_in_acres }}</p> <!-- Correct icon for Electricity -->
+                    <p><i class="fa-solid fa-water"></i>Latitude: {{land.latitude}}</p> <!-- Correct icon for Water -->
+                    <p><i class="fa-solid fa-water"></i>Longitude: {{land.longitude}}</p> <!-- Correct icon for Water -->
+                    
                     
                    
                 </div>
@@ -217,12 +219,13 @@
         </div>
         <div class="props-detail-3">
             <h2>Interested in this propperty ? book now</h2>
-            <form action="">
-                <input type="text" name="" id="" placeholder="Your name" required>
-                <input type="email" name="" id="" placeholder="Email" required>
-                <input type="number" name="" id="" placeholder="phone number">
-              <textarea name="" id="" placeholder="are you interested?" required></textarea>
-              <button>Boook</button>
+            <form method="POST">
+                {% csrf_token %}
+                <input type="text" name="full_name" id="" placeholder="Your name" required>
+                <input type="email" name="email" id="" placeholder="Email" required>
+                <input type="number" name="phone_number" id="" placeholder="phone number">
+              <textarea name="additional_requests" id="" placeholder="are you interested?" required></textarea>
+              <button type="submit">Book</button>
             </form>
         </div>
     </div>
